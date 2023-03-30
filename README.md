@@ -7,5 +7,5 @@ Madai,
 Copa Flores Arnold,
 Flores Modragon Madai,
 Esprella Lopez Jonatan,
-Ledezma Zeballos Jorge,
+Ledezma Zeballos Jorge, [scrum maater]
 Lopez Orellana Adrian Leonardo
