@@ -43,7 +43,7 @@ body{
 
 .list{
     width: 100%;
-    height:750px;
+    height:950px;
     display: flex;
     flex-direction: column;
     border-radius: 0 16px 16px 0;
@@ -101,7 +101,7 @@ body{
 
 .main{
     width: 970px;
-    height: 800px;
+    height: 950px;
     background: skyblue;
     position: absolute;
     top: 80px; 

@@ -65,73 +65,46 @@
     </nav>
     <main class="main" >
         <h1 class= "titulo-seccion" >FORMULARIO DE REGISTRO</h1>
-        <form action="" method="POST" >
-            <table style= "margin: 0px auto; justify-content: center;">
-               <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-              </tr>
-              <tr>
-                <td width= "380px">
-                  <label for="">Nombres:</label><br>
-                  <input type="text" placeholder="Ingrese nombres">
-                </td>
-                <td></td>
-                <td colspan="2" >
-                  <label for="tipo-usuario">Tipo de Usuario:</label><br>
-                  <select id = "tipo-usuario" Style = "color:gray;">
-                      <option value="selecion_tipo_usuario">Seleccione tipo de usuario</option>
-                      <option value="Vendedor ">Vendedor</option>
-                      <option value="Almacenero">Almacenero</option>
-                      <option value="Gerente">Gerente</option>
-                  </select>
-                  
+        <form action="" method="POST"  >
+            
+            <div class="form-content">
+                <label for="">Nombres:</label><label for="" Style='color:red;'>*</label>
+            <br>
+            <input type="text" placeholder="Ingrese nombres">
 
-                </td>
-              </tr>
+            <br><label for="">Apellidos:</label><label for="" Style='color:red;'>*</label><br>
+            <input type="text" placeholder="Ingrese apellidos">
 
-              <tr>
-                <td>
-                  <label for="">Apellidos:</label><br>
-                  <input type="text" placeholder="Ingrese apellidos">
-                </td>
-                <td></td>
-                <td>
-                  <label for="">Numero de telefono:</label><br>
-                  <input type="text" placeholder="Ingrese Número">
-                </td>
-                <td width="280px">
-                  <label for="">CI</label>
-                  <input type="text" placeholder="Ingrese ci">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <label for="">Correo electrónico:</label><br>
-                    <input type="text" placeholder="ejemplo@servidor.com">
-                </td>
-                <td></td>
-                <td>
-                  <label for="">Contraseña:</label><br>
-                  <input type="text" placeholder="Ingrese Contraseña">
-                </td>
-                <td>
-                  <label for="">Confirmar contraseña</label>
-                  <input type="text" placeholder="Ingrese Contraseña">
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td colspan= "2">
-                    <input type= "submit" value= "Cancelar">
-                    <input type= "submit" value= "Guardar">
-                </td>
+            <br><label for="">Correo electrónico</label><label for="" Style='color:red;'>*</label><br>
+            <input type="text" placeholder="ejemplo@servidor.com">
+
+            <br><label for="">Dirección</label><label for="" Style='color:red;'>*</label> <br>
+            <input type="text" placeholder="Ingrese dirección">            
+            
+            <br><label for="tipo-usuario">Tipo de Usuario:</label><label for="" Style='color:red;'>*</label><br>
+            <select id = "tipo-usuario" Style = "color:gray;">
+                <option value="selecion_tipo_usuario">Seleccione tipo de usuario</option>
+                <option value="Vendedor ">Vendedor</option>
+                <option value="Almacenero">Almacenero</option>
+                <option value="Gerente">Gerente</option>
+            </select>
                 
-              </tr>
-            </table>   
+            <br><label for="">Numero de telefono</label><label for="" Style='color:red;'>*</label><br>
+            <input type="text" placeholder="Ingrese Número">
+                
+            <br><label for="">CI</label><label for="" Style='color:red;'>*</label> <br>
+            <input type="text" placeholder="Ingrese ci">
+                    
+            <br><label for="">Contraseña</label><label for="" Style='color:red;'>*</label><br>
+            <input type="text" placeholder="Ingrese Contraseña">
+                
+            <br><label for="">Confirmar contraseña</label><label for="" Style='color:red;'>*</label><br>
+            <input type="text" placeholder="Ingrese Contraseña"><br>
+                
+            <input type= "submit" value= "Guardar" style = "background-color: #4CAF50;">
+            <input type= "submit" value= "Cancelar" style = "background-color: red;">
+            </div>
+                
             
         </form>
     </main>
