@@ -12,103 +12,87 @@
     <header class="header">
         logo
 	</header>	
-    <nav class="nav">
-        <ul class="list">
-
-            <li class="list__item">
-                <div class="list__button">
-                    <a href="index.html" class="nav__link">Inicio</a>
-                </div>
-            </li>
-
-            <li class="list__item list__item--click">
-                <div class="list__button list__button--click">
-                    <a href="#" class="nav__link">Usuario</a> 
-                    <img src="assets/arrow.svg" class="list__arrow">
-                </div>
-
-                <ul class="list__show">
-                    <li class="list__inside">
-                        <a href="form_usr.html" class="nav__link nav__link--inside">Registrar Usuario</a>
-                    </li>
-
-                    <!-- <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
-                    </li> -->
-                </ul>
-
-            </li>
-
-            <!-- <li class="list__item list__item--click">
-                <div class="list__button list__button--click">
-                    <a href="#" class="nav__link">Proveedor</a>
-                    <img src="assets/arrow.svg" class="list__arrow">
-                </div>
-
-                <ul class="list__show">
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Regirtar proveedor</a>
-                    </li>
-
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
-                    </li>
-
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
-                    </li>
-                </ul>
-
-            </li> -->
-
-        </ul>
-    </nav>
-    <main class="main" >
-        <h1 class= "titulo-seccion" >FORMULARIO DE REGISTRO</h1>
-        <form action="" method="POST"  >
-            
-            <div class="form-content">
-                <label for="">Nombres:</label><label for="" Style='color:red;'>*</label>
-            <br>
-            <input type="text" placeholder="Ingrese nombres">
-
-            <br><label for="">Apellidos:</label><label for="" Style='color:red;'>*</label><br>
-            <input type="text" placeholder="Ingrese apellidos">
-
-            <br><label for="">Correo electrónico</label><label for="" Style='color:red;'>*</label><br>
-            <input type="text" placeholder="ejemplo@servidor.com">
-
-            <br><label for="">Dirección</label><label for="" Style='color:red;'>*</label> <br>
-            <input type="text" placeholder="Ingrese dirección">            
-            
-            <br><label for="tipo-usuario">Tipo de Usuario:</label><label for="" Style='color:red;'>*</label><br>
-            <select id = "tipo-usuario" Style = "color:gray;">
-                <option value="selecion_tipo_usuario">Seleccione tipo de usuario</option>
-                <option value="Vendedor ">Vendedor</option>
-                <option value="Almacenero">Almacenero</option>
-                <option value="Gerente">Gerente</option>
-            </select>
-                
-            <br><label for="">Numero de telefono</label><label for="" Style='color:red;'>*</label><br>
-            <input type="text" placeholder="Ingrese Número">
-                
-            <br><label for="">CI</label><label for="" Style='color:red;'>*</label> <br>
-            <input type="text" placeholder="Ingrese ci">
-                    
-            <br><label for="">Contraseña</label><label for="" Style='color:red;'>*</label><br>
-            <input type="text" placeholder="Ingrese Contraseña">
-                
-            <br><label for="">Confirmar contraseña</label><label for="" Style='color:red;'>*</label><br>
-            <input type="text" placeholder="Ingrese Contraseña"><br>
-                
-            <input type= "submit" value= "Guardar" style = "background-color: #4CAF50;">
-            <input type= "submit" value= "Cancelar" style = "background-color: red;">
-            </div>
-                
-            
-        </form>
-    </main>
     
+    <main class="main" >
+        <section class="nav">
+			<ul class="list">
+
+				<li class="list__item">
+					<div class="list__button">
+						<a href="index.html" class="nav__link">Inicio</a>
+					</div>
+				</li>
+
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a href="#" class="nav__link">Usuario</a> 
+						<img src="assets/arrow.svg" class="list__arrow">
+					</div>
+
+					<ul class="list__show">
+						<li class="list__inside">
+							<a href="form_usr.html" class="nav__link nav__link--inside">Registrar Usuario</a>
+						</li>
+
+
+					</ul>
+
+				</li>
+			</ul>
+		</section>
+		<aside class="aside">
+			
+				<h1 class= "titulo-seccion" >FORMULARIO DE REGISTRO</h1>
+				
+				<form action="" method="POST" class = "form" >
+								<br>
+								<label  for="" id = "la">Nombres</label><label for="" Style='color:#be1831;'>*</label>
+								<br>
+								<input type="text" placeholder="Ingrese nombres">
+								<br>
+								<label for="">Apellidos</label><label for="" Style='color:#be1831;'>*</label><br>
+								<input type="text" placeholder="Ingrese apellidos">
+								<br>
+								<label for="">Correo electrónico</label><label for="" Style='color:#be1831;'>*</label><br>
+								<input type="text" placeholder="ejemplo@servidor.com">
+								<br>
+								<label for="">Dirección</label><label for="" Style='color:#be1831;'>*</label> <br>
+								<input type="text" placeholder="Ingrese dirección">            
+								<br>
+								<label for="tipo-usuario">Tipo de Usuario:</label><label for="" Style='color:#be1831;'>*</label><br>
+								<select id = "tipo-usuario" Style = "color:gray;">
+									<option value="selecion_tipo_usuario">Seleccione tipo de usuario</option>
+									<option value="Vendedor ">Vendedor</option>
+									<option value="Almacenero">Almacenero</option>
+									<option value="Gerente">Gerente</option>
+								</select>
+								<br><label for="">Numero de telefono</label><label for="" Style='color:#be1831;'>*</label><br>
+								<input type="text" placeholder="Ingrese Número">
+									<br>				<label for="">CI</label><label for="" Style='color:#be1831;'>*</label> <br>
+								<input type="text" placeholder="Ingrese ci">
+					<br>
+								<label for="">Contraseña</label><label for="" Style='color:#be1831;'>*</label><br>
+								<input type="text" placeholder="Ingrese Contraseña">
+					<br>
+								<label for="">Confirmar contraseña</label><label for="" Style='color:#be1831;'>*</label><br>
+								<input type="text" placeholder="Ingrese Contraseña" ><br>
+					<br>
+								<input type= "submit" value= "Guardar" style = "background-color: #22a538;">
+								<input type= "submit" value= "Cancelar" style = "background-color: #be1831;">
+							
+					
+							<p style = "color: #be1831;"><b>* campos obligatorios<b></p>
+				</form>
+			
+			
+			
+			
+		</aside>
+		
+    </main>
+    <footer> 
+	
+	</footer>
     <script src="main.js"></script>
 </body>
 </html>
