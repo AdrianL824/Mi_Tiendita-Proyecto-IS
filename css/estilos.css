@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
 	box-sizing: border-box;
 }
@@ -260,4 +261,49 @@ main {
 	.formulario__btn {
 		width: 100%;
 	}
+}
+ /*Implementacion de madai para los botones guardar y cancelar*/
+.hero__texts{
+    width: 100%;    
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hero__cta{
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 60px;
+    border: 1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 600;
+    background-color: #10923b;
+    transition: background-color .3s;
+}
+
+.hero__grupo-btn{
+	grid-column: span 2;
+}
+
+.hero__cta:hover{
+    background-color: #fff;
+    color: #061736;
+}
+.hero__cta2{
+
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 60px;
+    border: 1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 600;
+    background-color: #690b0b;
+    transition: background-color .3s;
+}
+
+.hero__cta2:hover{
+    background-color: #fff;
+    color: #061736;
 }
