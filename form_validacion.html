@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi tiendita-Registro de ususario</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+	<header class="header">
+        logo
+	</header>
+	<nav class="nav">
+        <ul class="list">
+
+            <li class="list__item">
+                <div class="list__button">
+                    <a href="index.html" class="nav__link">Inicio</a>
+                </div>
+            </li>
+
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <a href="#" class="nav__link">Usuario</a> 
+                    <img src="assets/arrow.svg" class="list__arrow">
+                </div>
+
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="form_validacion.html" class="nav__link nav__link--inside">Registrar Usuario</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+	<main>
+		<h1 class= "titulo-seccion" >Formulario de registro</h1>
+		<form action="" class="formulario" id="formulario">
+			
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombres</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ingrese nombres">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese 2 a 30 carácteres alfabéticos</p>
+			</div>
+
+			<!-- Grupo: apellidos -->
+			<div class="formulario__grupo" id="grupo__apellidos">
+				<label for="apellidos" class="formulario__label">Apellidos</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="apellidos" id="apellidos" placeholder="Ingrese apellidos">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese 2 a 50 carácteres alfabéticos</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="ejemplo@servidor.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Correo electrónico inválido</p>
+			</div>
+
+			<!-- Grupo: direccion -->
+			<div class="formulario__grupo" id="grupo__direccion">
+				<label for="direccion" class="formulario__label">Dirección</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="Ingrese dirección">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese 5 a 100 carácteres alfanuméricos</p>
+			</div>
+
+			<!-- Grupo: tipoUsuario -->
+			<div class="formulario__grupo" id="grupo__tipoUsuario">
+				<label for="tipoUsuario" class="formulario__label">Tipo de Usuario</label>
+				<div class="formulario__grupo-input">
+					<!-- <input type="text" class="formulario__input" name="tipoUsuario" id="tipoUsuario" placeholder="Seleccione tipo usuario"> -->
+					<select class="formulario__input tipoUsuario" id="tipoUsuario">
+						<option value="" disabled selected>Seleccione tipo usuario</option>
+						<option value="Vendedor">Vendedor</option>
+						<option value="Almacenero">Almacenero</option>
+						<option value="Gerente propietario">Gerente propietario</option>
+					</select>
+				</div>
+				<p class="formulario__input-error">El usuario tiene tener un tipo de usuario.</p>
+			</div>
+
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Ingrese número">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese 7 a 8 carácteres numericos</p>
+			</div>
+
+			<!-- Grupo: Ci -->
+			<div class="formulario__grupo" id="grupo__ci">
+				<label for="ci" class="formulario__label">C.I.</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="ci" id="ci" placeholder="Ingrese ci">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese 6 a 8 carácteres numéricos</p>
+			</div>
+
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password" placeholder="Ingrese contraseña">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese 6 a 20 carácteres alfanuméricos</p>
+			</div>
+
+			<!-- Grupo: Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Confirmar Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password2" id="password2" placeholder="Ingrese contraseña">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Las contraseñas no coinciden</p>
+			</div>
+
+			<!-- <div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div> -->
+
+			<!-- boton de enviar -->
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<!-- <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p> -->
+			</div>
+		</form>
+	</main>
+
+	<script src="js/main.js"></script>
+	<script src="js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
