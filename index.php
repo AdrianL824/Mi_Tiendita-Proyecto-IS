@@ -124,7 +124,7 @@
                 <td></td>
                 <td>
                   <label for="">Contraseña:</label><br>
-                  <input type="text" name= "contraseña"placeholder="Ingrese Contraseña">
+                  <input type="text" name= "contraseña"placeholder="Ingrese  Contraseña">
                 </td>
                 <td>
                   <label for="">Confirmar contraseña</label>
