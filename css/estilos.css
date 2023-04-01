@@ -265,7 +265,7 @@ main {
  /*Implementacion de madai para los botones guardar y cancelar*/
 .hero__texts{
     width: 100%;    
-    padding-top: 100px;
+    padding-top: 140px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -282,9 +282,9 @@ main {
     transition: background-color .3s;
 }
 
-.hero__grupo-btn{
+/*.hero__grupo-btn{
 	grid-column: span 2;
-}
+}*/
 
 .hero__cta:hover{
     background-color: #fff;
