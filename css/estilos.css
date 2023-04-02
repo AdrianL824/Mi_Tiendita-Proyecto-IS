@@ -298,9 +298,6 @@ main {
     transition: background-color .3s;
 }
 
-/*.hero__grupo-btn{
-	grid-column: span 2;
-}*/
 
 .hero__cta:hover{
     background-color: #fff;
