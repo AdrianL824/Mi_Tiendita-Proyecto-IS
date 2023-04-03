@@ -3,12 +3,12 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.
-	apellidos: /^[a-zA-ZÀ-ÿ\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.
+	apellidos: /^[a-zA-ZÀ-ÿ\s]{2,50}$/, // Letras y espacios, pueden llevar acentos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	direccion:/^[a-zA-Z0-9.#\/\s]{7,40}$/, // Letras y espacios, pueden llevar acentos.
+	direccion:/^[a-zA-Z0-9.#\/\s]{5,100}$/, // Letras y espacios, pueden llevar acentos.
 	telefono: /^\d{7,8}$/, // 7 a 8 numeros.
-	ci: /^[0-9]\d{6,8}$/, // 4 a 8 digitos.
-	password: /^.{4,12}$/ // 4 a 12 digitos.
+	ci: /^\d{6,8}$/, // 4 a 8 digitos.
+	password: /^.{6,20}$/ // 4 a 12 digitos.
 }
 
 const campos = {
@@ -55,15 +55,11 @@ const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos[campo] = true;
 	} else {
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos[campo] = false;
 	}
@@ -73,18 +69,14 @@ const validarPassword2 = () => {
 	const inputPassword1 = document.getElementById('password');
 	const inputPassword2 = document.getElementById('password2');
 
-	if(inputPassword1.value !== inputPassword2.value){
+	if(inputPassword1.value !== inputPassword2.value || inputPassword1.value === "" && inputPassword2.value == ""){
 		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__password2 i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos['password'] = false;
 	} else {
 		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle');
-		document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
 		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos['password'] = true;
 	}
@@ -113,4 +105,92 @@ formulario.addEventListener('submit', (e) => {
 	} else {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
+});
+
+
+//Eventos de mouse para controlar espacios correctos
+
+let bandera2 = false;
+const verificarcampo = document.querySelector('.hero__cta');
+verificarcampo.addEventListener('click', (e) => {
+	e.preventDefault();
+	select = document.getElementById('tipoUsuario').value;
+	val = false;
+	if(select == ""){
+		val = false;
+	}else{
+		val = true;
+	}
+
+	if(campos.nombre == true && campos.apellidos==true && campos.correo == true && campos.direccion == true && campos.telefono == true 
+		&& campos.ci == true && campos.password == true && val == true){
+
+		bandera2 = true;
+		console.log(bandera2);
+	}else{
+		bandera2 = false;
+		console.log(bandera2);
+	}
+
+	//Eventos de mouse para controlar cuando abrir y cerrar el modal
+	if(bandera2 == true){
+	
+		const modal = document.querySelector('.modal');
+		const openModal1 = document.querySelector('.modal__close');
+		const closeModal2 = document.querySelector('.modal__close2');
+	
+			modal.classList.add('modal--show');
+	
+		openModal1.addEventListener('click', (e)=>{
+			e.preventDefault();
+			modal.classList.remove('modal--show');
+			const modal3 = document.querySelector('.modal3');
+			modal3.classList.add('modal3--show');
+				const closeModal3 = document.querySelector('.close3_modal');
+				closeModal3.addEventListener('click', (e)=>{
+					e.preventDefault();
+					modal3.classList.remove('modal3--show');
+				});
+	
+		});
+	
+		closeModal2.addEventListener('click', (e)=>{
+			e.preventDefault();
+			modal.classList.remove('modal--show');
+			const modal22 = document.querySelector('.modal2');
+			modal22.classList.add('modal2--show');
+				const closeModal22 = document.querySelector('.close2_modal');
+				closeModal22.addEventListener('click', (e)=>{
+					e.preventDefault();
+					modal22.classList.remove('modal2--show');
+				});
+		});
+		
+	}else{
+		/*Modal para avisar que llenen todos los campos*/
+		const modalAdvertencia = document.querySelector('.modal4');
+		const closeModalAdvertencia = document.querySelector('.close4_modal');
+
+			modalAdvertencia.classList.add('modal4--show');
+
+			closeModalAdvertencia.addEventListener('click', (e)=>{
+				e.preventDefault();
+				modalAdvertencia.classList.remove('modal4--show');
+			});
+	}
+});
+
+/*Cuando se presione el boton cancelar del formulario*/
+const openModal2 = document.querySelector('.hero__cta2');
+const modal2 = document.querySelector('.modal2');
+const closeModal21 = document.querySelector('.close_modal');
+
+openModal2.addEventListener('click', (e)=>{
+	e.preventDefault();
+	modal2.classList.add('modal2--show');
+});
+
+closeModal21.addEventListener('click', (e)=>{
+	e.preventDefault();
+	modal2.classList.remove('modal2--show');
 });

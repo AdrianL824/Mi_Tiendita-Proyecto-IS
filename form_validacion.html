@@ -11,9 +11,11 @@
 
 </head>
 <body>
-	<header class="header">
-        logo
-	</header>
+		<header class="header">
+        	<img class="imglogo" src="logito.png" alt="">
+			<!-- Mi Tiendida -->
+		</header>
+	
 	<nav class="nav">
         <ul class="list">
 
@@ -31,7 +33,10 @@
 
                 <ul class="list__show">
                     <li class="list__inside">
-                        <a href="form_validacion.html" class="nav__link nav__link--inside">Registrar Usuario</a>
+                        <a href="form_validacion.html" class="nav__link nav__link--inside">Registrar usuario</a>
+                    </li>
+					<li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Lista de usuarios</a>
                     </li>
                 </ul>
             </li>
@@ -43,7 +48,10 @@
 			
 			<!-- Grupo: Nombre -->
 			<div class="formulario__grupo" id="grupo__nombre">
-				<label for="nombre" class="formulario__label">Nombres</label>
+				<div class="contval">
+					<label for="nombre" class="formulario__label">Nombre/s</label>
+					<p class="signo">*</p>
+				</div>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ingrese nombres">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -53,7 +61,10 @@
 
 			<!-- Grupo: apellidos -->
 			<div class="formulario__grupo" id="grupo__apellidos">
-				<label for="apellidos" class="formulario__label">Apellidos</label>
+				<div class="contval">
+					<label for="apellidos" class="formulario__label">Apellido/s</label>
+					<p class="signo">*</p>
+				</div>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="apellidos" id="apellidos" placeholder="Ingrese apellidos">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -63,7 +74,10 @@
 
 			<!-- Grupo: Correo Electronico -->
 			<div class="formulario__grupo" id="grupo__correo">
-				<label for="correo" class="formulario__label">Correo electrónico</label>
+				<div class="contval">
+					<label for="correo" class="formulario__label">Correo electrónico</label>
+					<p class="signo">*</p>
+				</div>
 				<div class="formulario__grupo-input">
 					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="ejemplo@servidor.com">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -73,7 +87,10 @@
 
 			<!-- Grupo: direccion -->
 			<div class="formulario__grupo" id="grupo__direccion">
-				<label for="direccion" class="formulario__label">Dirección</label>
+				<div class="contval">
+					<label for="direccion" class="formulario__label">Dirección</label>
+					<p class="signo">*</p>
+				</div>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="Ingrese dirección">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -83,7 +100,10 @@
 
 			<!-- Grupo: tipoUsuario -->
 			<div class="formulario__grupo" id="grupo__tipoUsuario">
-				<label for="tipoUsuario" class="formulario__label">Tipo de Usuario</label>
+				<div class="contval">
+					<label for="tipoUsuario" class="formulario__label">Tipo de usuario</label>
+					<p class="signo">*</p>
+				</div>
 				<div class="formulario__grupo-input">
 					<!-- <input type="text" class="formulario__input" name="tipoUsuario" id="tipoUsuario" placeholder="Seleccione tipo usuario"> -->
 					<select class="formulario__input tipoUsuario" id="tipoUsuario">
@@ -98,7 +118,10 @@
 
 			<!-- Grupo: Teléfono -->
 			<div class="formulario__grupo" id="grupo__telefono">
-				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="contval">
+					<label for="telefono" class="formulario__label">Número de teléfono</label>
+					<p class="signo">*</p>
+				</div>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Ingrese número">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -106,9 +129,25 @@
 				<p class="formulario__input-error">Ingrese 7 a 8 carácteres numericos</p>
 			</div>
 
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<div class="contval">
+					<label for="password" class="formulario__label">Contraseña</label>
+					<p class="signo">*</p>
+				</div>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password" placeholder="Ingrese contraseña">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese 6 a 20 carácteres alfanuméricos</p>
+			</div>
+			
 			<!-- Grupo: Ci -->
 			<div class="formulario__grupo" id="grupo__ci">
-				<label for="ci" class="formulario__label">C.I.</label>
+				<div class="contval">
+					<label for="ci" class="formulario__label">C.I.</label>
+					<p class="signo">*</p>
+				</div>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="ci" id="ci" placeholder="Ingrese ci">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -116,32 +155,32 @@
 				<p class="formulario__input-error">Ingrese 6 a 8 carácteres numéricos</p>
 			</div>
 
-			<!-- Grupo: Contraseña -->
-			<div class="formulario__grupo" id="grupo__password">
-				<label for="password" class="formulario__label">Contraseña</label>
-				<div class="formulario__grupo-input">
-					<input type="password" class="formulario__input" name="password" id="password" placeholder="Ingrese contraseña">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p class="formulario__input-error">Ingrese 6 a 20 carácteres alfanuméricos</p>
-			</div>
-
 			<!-- Grupo: Contraseña 2 -->
 			<div class="formulario__grupo" id="grupo__password2">
-				<label for="password2" class="formulario__label">Confirmar Contraseña</label>
+				<div class="contval">
+					<label for="password2" class="formulario__label">Confirmar contraseña</label>
+					<p class="signo">*</p>
+				</div>
 				<div class="formulario__grupo-input">
 					<input type="password" class="formulario__input" name="password2" id="password2" placeholder="Ingrese contraseña">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">Las contraseñas no coinciden</p>
+				<div class="campo"><br><br><br>
+					* Campo obligatorio
+				</div>
 			</div>
-
+		
+			
 			<!--Botones en el formulario guardar y cancelar-->
 			<div class="hero__texts">
                 <a href="modal_usr.html" class="hero__cta">Guardar</a>
                 <a href="modal_usr.html" class="hero__cta2">Cancelar</a>
-            </div>
+				
+			</div>
 			
+
+
 			<!--Seccion de Modales a mostrar-->
 			<section class="modal ">
                 <div class="modal__container">
@@ -169,12 +208,18 @@
                 </div>
             </section>
 
+			<section class="modal4 ">
+                <div class="modal4__container">
+                    <p class="modal4__paragraph">Asegúrese de que todos los campos estén llenados correctamente</p>
+                    <div class="close4_modal">x</div>
+                </div>
+            </section>
+
 		</form>
 	</main>
 
 	<script src="js/main.js"></script>
 	<script src="js/formulario.js"></script>
-	<script src="js/main_modal.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
