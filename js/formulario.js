@@ -11,6 +11,7 @@ const cleanInput = (formulario) => {
 	});
 }
 
+
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.
 	apellidos: /^[a-zA-ZÀ-ÿ\s]{2,50}$/, // Letras y espacios, pueden llevar acentos.
@@ -19,4 +20,14 @@ const expresiones = {
 	telefono: /^\d{7,8}$/, // 7 a 8 numeros.
 	ci: /^\d{6,8}$/, // 4 a 8 digitos.
 	password: /^.{6,20}$/ // 4 a 12 digitos.
+}
+
+const campos = {
+	nombre: false,
+	apellidos: false,
+	correo: false,
+	direccion: false,
+	telefono: false,
+	ci: false,
+	password: false
 }
