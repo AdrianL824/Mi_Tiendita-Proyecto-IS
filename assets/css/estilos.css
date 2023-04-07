@@ -320,3 +320,7 @@ main {
     background-color: #fff;
     color: #061736;
 }
+
+button{
+	cursor: pointer;
+}
