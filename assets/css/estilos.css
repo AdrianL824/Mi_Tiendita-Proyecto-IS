@@ -9,24 +9,31 @@ body {
 }
 
 
+
 .header{
     width: 100%;
-    height: 55px;
     background-color: #9594bb;
-    float: left;
     font-size:xx-large;
     padding-left: 1%;
 }
 
+.container{
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .nav{
-    width: 280px;
+	width: 16em;
+	min-width: 16em;
+	height: 84vh;
 }
 
 .nav__link{
-    color: #303440;
-    display: block;
-    padding: 15px 0;
-    text-decoration: none;
+	color: #303440;
+	display: block;
+	padding: 15px 0;
+	text-decoration: none;
 }
 
 .nav__link--inside{
@@ -40,15 +47,19 @@ body {
     background:#F6F8FA;
 }
 
+.menu-active{
+	background-color: rgba(0, 0, 0, 0.03);
+}
+
 .list{
-    width: 89%;
-    height: 810px;
-    display: flex;
+  display: flex;
+	height: 100%;
 	padding-right: 10px;
 	padding-left: 3px;
-    flex-direction: column;
-    border-radius: 0 16px 16px 0;
-    background: #fff;
+	flex-direction: column;
+	margin: 0;
+	border-radius: 0 16px 16px 0;
+	background: #fff;
 }
 
 .list__item{
@@ -76,18 +87,18 @@ body {
 
 .list__arrow{
 	padding-right: 20px;
-    margin-left: auto;
-    transition: transform .3s;
+	margin-left: auto;
+	transition: transform .3s;
 }
 
 .list__show{
-    width: 80%;
+  width: 80%;
 	padding-left: 2px;
-    margin-left: auto;
-    border-left: 2px solid #303440;
-    list-style: none;
-    transition: height .4s;
-    height: 0;
+	margin-left: auto;
+	border-left: 2px solid #303440;
+	list-style: none;
+	transition: height .4s;
+	height: 0;
 }
 
 .user{
@@ -113,15 +124,14 @@ body {
     
 }
 
-main {
-	width: 81.5%;
-    height: 120%;
-    background: #c9cde8;
-    position: absolute;
-    padding-left: 15px;
-	padding-right: 15px;
-    top: 80px; 
-    left: 250px;
+.main {
+	display: flex;
+	width: 100%;
+	height: 84vh;
+	padding: 0.5em 2em;
+	background: #c9cde8;
+	justify-content: center;
+	/* align-items: center; */
 }
 
 .formulario {
