@@ -1,5 +1,16 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
+let RAIZ = 'http://localhost/refac_tiendita';
+
+const cleanInput = (formulario) => {
+	const form_children = Array.from(formulario.querySelectorAll("input"));
+	form_children.forEach((item) => {
+		if(item.nodeName === 'INPUT'){
+			item.value = '';
+		}
+	});
+}
+
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.
@@ -22,6 +33,7 @@ const campos = {
 }
 
 const validarFormulario = (e) => {
+	console.log(e.target);
 	switch (e.target.name) {
 		case "nombre":
 			validarCampo(expresiones.nombre, e.target, 'nombre');
@@ -83,6 +95,11 @@ const validarPassword2 = () => {
 }
 
 inputs.forEach((input) => {
+
+	if(location.href !== `${RAIZ}/user-register.php`){
+		document.addEventListener("DOMContentLoaded", () => validarFormulario({target: input}));
+	}
+
 	input.addEventListener('keyup', validarFormulario);
 	input.addEventListener('blur', validarFormulario);
 });
@@ -134,7 +151,7 @@ verificarcampo.addEventListener('click', (e) => {
 
 	//Eventos de mouse para controlar cuando abrir y cerrar el modal
 	if(bandera2 == true){
-	
+		
 		const modal = document.querySelector('.modal');
 		const openModal1 = document.querySelector('.modal__close');
 		const closeModal2 = document.querySelector('.modal__close2');
@@ -150,20 +167,27 @@ verificarcampo.addEventListener('click', (e) => {
 				closeModal3.addEventListener('click', (e)=>{
 					e.preventDefault();
 					modal3.classList.remove('modal3--show');
+					formulario.submit();
 				});
-	
+			
 		});
 	
 		closeModal2.addEventListener('click', (e)=>{
 			e.preventDefault();
+
+			if(location.href === `${RAIZ}/user-register.php`){
+				cleanInput(formulario);
+			}
+
 			modal.classList.remove('modal--show');
 			const modal22 = document.querySelector('.modal2');
 			modal22.classList.add('modal2--show');
-				const closeModal22 = document.querySelector('.close2_modal');
-				closeModal22.addEventListener('click', (e)=>{
-					e.preventDefault();
-					modal22.classList.remove('modal2--show');
-				});
+			const closeModal22 = document.querySelector('.close2_modal');
+			closeModal22.addEventListener('click', (e)=>{
+				e.preventDefault();
+				modal22.classList.remove('modal2--show');
+			});
+			
 		});
 		
 	}else{
@@ -188,6 +212,12 @@ const closeModal21 = document.querySelector('.close_modal');
 openModal2.addEventListener('click', (e)=>{
 	e.preventDefault();
 	modal2.classList.add('modal2--show');
+
+	if(location.href === `${RAIZ}/user-register.php`){
+		cleanInput(formulario);
+	}else{
+		location.href = `${RAIZ}/users.php`
+	}
 });
 
 closeModal21.addEventListener('click', (e)=>{
