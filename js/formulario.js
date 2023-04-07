@@ -123,3 +123,104 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
+
+
+//Eventos de mouse para controlar espacios correctos
+
+let bandera2 = false;
+const verificarcampo = document.querySelector('.hero__cta');
+verificarcampo.addEventListener('click', (e) => {
+	e.preventDefault();
+	select = document.getElementById('tipoUsuario').value;
+	val = false;
+	if(select == ""){
+		val = false;
+	}else{
+		val = true;
+	}
+
+	if(campos.nombre == true && campos.apellidos==true && campos.correo == true && campos.direccion == true && campos.telefono == true 
+		&& campos.ci == true && campos.password == true && val == true){
+
+		bandera2 = true;
+		console.log(bandera2);
+	}else{
+		bandera2 = false;
+		console.log(bandera2);
+	}
+
+	//Eventos de mouse para controlar cuando abrir y cerrar el modal
+	if(bandera2 == true){
+		
+		const modal = document.querySelector('.modal');
+		const openModal1 = document.querySelector('.modal__close');
+		const closeModal2 = document.querySelector('.modal__close2');
+	
+			modal.classList.add('modal--show');
+	
+		openModal1.addEventListener('click', (e)=>{
+			e.preventDefault();
+			modal.classList.remove('modal--show');
+			const modal3 = document.querySelector('.modal3');
+			modal3.classList.add('modal3--show');
+				const closeModal3 = document.querySelector('.close3_modal');
+				closeModal3.addEventListener('click', (e)=>{
+					e.preventDefault();
+					modal3.classList.remove('modal3--show');
+					formulario.submit();
+				});
+			
+		});
+	
+		closeModal2.addEventListener('click', (e)=>{
+			e.preventDefault();
+
+			if(location.href === `${RAIZ}/user-register.php`){
+				cleanInput(formulario);
+			}
+
+			modal.classList.remove('modal--show');
+			const modal22 = document.querySelector('.modal2');
+			modal22.classList.add('modal2--show');
+			const closeModal22 = document.querySelector('.close2_modal');
+			closeModal22.addEventListener('click', (e)=>{
+				e.preventDefault();
+				modal22.classList.remove('modal2--show');
+			});
+			
+		});
+		
+	}else{
+		/*Modal para avisar que llenen todos los campos*/
+		const modalAdvertencia = document.querySelector('.modal4');
+		const closeModalAdvertencia = document.querySelector('.close4_modal');
+
+			modalAdvertencia.classList.add('modal4--show');
+
+			closeModalAdvertencia.addEventListener('click', (e)=>{
+				e.preventDefault();
+				modalAdvertencia.classList.remove('modal4--show');
+			});
+	}
+});
+
+/*Cuando se presione el boton cancelar del formulario*/
+const openModal2 = document.querySelector('.hero__cta2');
+const modal2 = document.querySelector('.modal2');
+const closeModal21 = document.querySelector('.close_modal');
+
+openModal2.addEventListener('click', (e)=>{
+	e.preventDefault();
+	modal2.classList.add('modal2--show');
+
+	if(location.href === `${RAIZ}/user-register.php`){
+		cleanInput(formulario);
+	}else{
+		location.href = `${RAIZ}/users.php`
+	}
+});
+
+closeModal21.addEventListener('click', (e)=>{
+	e.preventDefault();
+	modal2.classList.remove('modal2--show');
+});
