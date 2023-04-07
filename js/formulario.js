@@ -31,3 +31,34 @@ const campos = {
 	ci: false,
 	password: false
 }
+
+const validarFormulario = (e) => {
+	console.log(e.target);
+	switch (e.target.name) {
+		case "nombre":
+			validarCampo(expresiones.nombre, e.target, 'nombre');
+		break;
+		case "apellidos":
+			validarCampo(expresiones.apellidos, e.target, 'apellidos');
+		break;
+		case "correo":
+			validarCampo(expresiones.correo, e.target, 'correo');
+		break;
+		case "direccion":
+			validarCampo(expresiones.direccion, e.target, 'direccion');
+		break;
+		case "telefono":
+			validarCampo(expresiones.telefono, e.target, 'telefono');
+		break;
+		case "ci":
+			validarCampo(expresiones.ci, e.target, 'ci');
+		break;
+		case "password":
+			validarCampo(expresiones.password, e.target, 'password');
+			validarPassword2();
+		break;
+		case "password2":
+			validarPassword2();
+		break;
+	}
+}
