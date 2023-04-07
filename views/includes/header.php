@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="<?=RAIZ?>/assets/css/estilos.css">
   <link rel="stylesheet" href="<?=RAIZ?>/assets/css/app_modal_user.css">
   <link rel="stylesheet" href="<?=RAIZ?>/assets/css/pages.css">
+  <link rel="stylesheet" href="<?=RAIZ?>/assets/css/lista_usr.css">
 
   <script defer src="<?=RAIZ?>/assets/js/delete.js"></script>
 </head>
@@ -26,7 +27,7 @@
         <ul class="list">
           <li class="list__item">
             <div class="list__button <?=active('index.php')?>">
-              <a href="index.html" class="nav__link">Inicio</a>
+              <a href="index.php" class="nav__link">Inicio</a>
             </div>
           </li>
 
@@ -38,13 +39,16 @@
 
             <ul class="list__show">
               <li class="list__inside">
-                <a href="<?=RAIZ?>/user-register.html" class="nav__link nav__link--inside <?=active('user-register.php')?>">Registrar usuario</a>
+                <a href="<?=RAIZ?>/user-register.php" class="nav__link nav__link--inside <?=active('user-register.php')?>">Registrar usuario</a>
               </li>
               <li class="list__inside">
-                <a href="<?=RAIZ?>/" class="nav__link nav__link--inside <?=active('users.php')?>">Lista de usuarios</a>
+                <a href="<?=RAIZ?>/users.php" class="nav__link nav__link--inside <?=active('users.php')?>">Lista de usuarios</a>
               </li>
             </ul>
           </li>
         </ul>  
       </nav>
+
+
+      <main class="main custom-scroll">
 
