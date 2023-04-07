@@ -93,3 +93,13 @@ const validarPassword2 = () => {
 		campos['password'] = true;
 	}
 }
+
+inputs.forEach((input) => {
+
+	if(location.href !== `${RAIZ}/user-register.php`){
+		document.addEventListener("DOMContentLoaded", () => validarFormulario({target: input}));
+	}
+
+	input.addEventListener('keyup', validarFormulario);
+	input.addEventListener('blur', validarFormulario);
+});
