@@ -1,8 +1,6 @@
 let listElements = document.querySelectorAll('.list__button--click');
-let RAIZ_2 = 'http://localhost/refac_tiendita';
 
-
-const listElementFunction = (listElement) => {
+export const listElementFunction = (listElement) => {
     listElement.classList.toggle('arrow');
     
     let height = 0;
@@ -15,15 +13,17 @@ const listElementFunction = (listElement) => {
 }
 
 
-if(`${RAIZ_2}/user-register.php` === location.href ||
-    `${RAIZ_2}/users.php` === location.href){
-    listElements.forEach(listElement => {
-        listElementFunction(listElement);
-    });
+export const submenuActive = () => {
+  listElements.forEach(listElement => {
+    listElementFunction(listElement);
+  });
 }
 
-listElements.forEach(listElement => {
+
+export const menuAction = () => {
+  listElements.forEach(listElement => {
     listElement.addEventListener('click', () => {
         listElementFunction(listElement);
     })
-});
+  });
+}
