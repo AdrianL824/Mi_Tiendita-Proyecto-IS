@@ -1,18 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .modal{
+    display: flex;
     position: fixed;
-    top: 0;
+    top: -100vh;
     left: 0;
     right: 0;
     bottom: 0;
+    margin: auto;
+    width: 100%;
     background-color: #111111bd;
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .6s .9s;
-    --transform: translateY(-100vh);
-    --transition: transform .8s;
+    z-index: 10;
+    animation: show-modal .5s ease-out forwards;
+}
+
+@keyframes show-modal{
+    from {
+        top: -100vh;
+    }
+    to{
+        top: 0;
+    }
+}
+
+.modal-close{
+    animation: close-modal .8s ease-out forwards;
+}
+
+@keyframes close-modal{
+    from {
+        top: 0;
+    }
+    to{
+        top: -150vh;
+        opacity: 0;
+    }
 }
 
 .modal--show{
@@ -23,76 +45,6 @@
     --transition: transform .8s .8s;
 }
 
-.modal2{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #111111bd;
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .6s .9s;
-    --transform: translateY(-100vh);
-    --transition: transform .8s;
-}
-
-.modal2--show{
-    opacity: 1;
-    pointer-events: unset;
-    transition: opacity .6s;
-    --transform: translateY(0);
-    --transition: transform .8s .8s;
-}
-
-.modal3{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #111111bd;
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .6s .9s;
-    --transform: translateY(-100vh);
-    --transition: transform .8s;
-}
-
-.modal3--show{
-    opacity: 1;
-    pointer-events: unset;
-    transition: opacity .6s;
-    --transform: translateY(0);
-    --transition: transform .8s .8s;
-}
-
-.modal4{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #111111bd;
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .6s .9s;
-    --transform: translateY(-100vh);
-    --transition: transform .8s;
-}
-
-.modal4--show{
-    opacity: 1;
-    pointer-events: unset;
-    transition: opacity .6s;
-    --transform: translateY(0);
-    --transition: transform .8s .8s;
-}
-
-
 .modal__container{
     margin: auto;
     width: 90%;
@@ -101,54 +53,6 @@
     background-color: #fff;
     border-radius: 6px;
     padding: 1em 3em;
-    display: inline-block;
-    gap: 1em;
-    place-items: center;
-    grid-auto-columns: 100%;
-    transform: var(--transform);
-    transition:var(--transition);
-}
-
-.modal2__container{
-    margin: auto;
-    width: 90%;
-    max-width: 400px;
-    max-height: 90%;
-    background-color: #fff;
-    border-radius: 6px;
-    padding: 3em 2.5em;
-    display: inline-block;
-    gap: 1em;
-    place-items: center;
-    grid-auto-columns: 100%;
-    transform: var(--transform);
-    transition:var(--transition);
-}
-
-.modal3__container{
-    margin: auto;
-    width: 90%;
-    max-width: 400px;
-    max-height: 90%;
-    background-color: #fff;
-    border-radius: 6px;
-    padding: 3em 2.5em;
-    display: inline-block;
-    gap: 1em;
-    place-items: center;
-    grid-auto-columns: 100%;
-    transform: var(--transform);
-    transition:var(--transition);
-}
-
-.modal4__container{
-    margin: auto;
-    width: 90%;
-    max-width: 400px;
-    max-height: 90%;
-    background-color: #fff;
-    border-radius: 6px;
-    padding: 3em 2.5em;
     display: inline-block;
     gap: 1em;
     place-items: center;
@@ -168,20 +72,8 @@
     text-align: center;
 }
 
-.modal2__paragraph{
-    margin-bottom: 10px;
-    font-size: 15px;
-    text-align: center;
-}
-
-.modal3__paragraph{
-    margin-bottom: 10px;
-    font-size: 15px;
-    text-align: center;
-}
-
-.modal4__paragraph{
-    margin-bottom: 10px;
+.modal__paragraph__alert{
+    margin-bottom: 40px;
     font-size: 15px;
     text-align: center;
 }
@@ -196,7 +88,6 @@
 }
 
 .modal__close{
-
     text-decoration: none;
     color: #fff;
     background-color: #088d30;
@@ -209,7 +100,6 @@
 }
 
 .modal__close2{
-
     text-decoration: none;
     color: #fff;
     background-color: #ac1515;
@@ -233,40 +123,15 @@
 
 
 .close_modal{
-    position: absolute;
-    top: 3%;
-    right: 3%;
+    display: inline-block;
+    position: relative;
     font-size: x-large;
     font-weight: bold;
     cursor: pointer;
+    left: 13.5em;
+    top: -0.4em;
 }
 
 .close_modal:hover{
-    color: #bb1313;
-}
-
-.close3_modal{
-    position: absolute;
-    top: 3%;
-    right: 3%;
-    font-size: x-large;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close3_modal:hover{
-    color: #bb1313;
-}
-
-.close4_modal{
-    position: absolute;
-    top: 3%;
-    right: 3%;
-    font-size: x-large;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close4_modal:hover{
     color: #bb1313;
 }
