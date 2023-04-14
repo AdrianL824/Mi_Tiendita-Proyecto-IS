@@ -5,4 +5,5 @@
   <img class="banner-img" src="<?=RAIZ?>/assets/img/logito.png" alt="">
 </section>
 
+
 <?php require 'views/includes/footer.php' ?>
