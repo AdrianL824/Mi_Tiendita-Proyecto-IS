@@ -2,11 +2,9 @@
   require './config/config.php';
   require './helpers/users.php';
 
+  $users = getUsers();
+  
 
-  if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    createUser($_POST);
-  }
-
-  require './views/user-register.view.php';
+  require './views/users.view.php';
 
 ?>
