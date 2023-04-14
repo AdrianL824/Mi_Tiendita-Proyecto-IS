@@ -2,7 +2,7 @@
 
   require './config/db.php';
 
-  define('RAIZ', 'http://localhost/refac_tiendita');
+  define('RAIZ', 'http://localhost/');
 
 
   $DB_CONFIG = [
