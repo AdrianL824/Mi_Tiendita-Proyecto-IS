@@ -20,7 +20,7 @@
   }
 
 
-  function updateUser($inputs){
+  function updateUser($inputs, $id){
     extract($inputs);
     $sql = "UPDATE users SET nombre = ?, apellido = ?, email = ?, telefono = ?, ci = ?, direccion = ?, tipo_usr = ?, pass = ? WHERE id = ?";
     $res = CONNECT->prepare($sql);
