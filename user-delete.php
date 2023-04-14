@@ -7,7 +7,8 @@
     $id = (int) $_GET['id'];
     deleteUser($id);
 
-    header('location: '. RAIZ . '/users.php');
+    $pop = "Usuario eliminado correctamente";
+    header('location: '. RAIZ . '/users.php?pop=' . $pop);
   }
 
 ?>
