@@ -2,7 +2,7 @@
 
   require './config/db.php';
 
-  define('RAIZ', 'http://localhost/');
+  define('RAIZ', 'http://localhost/Mi_Tiendita-Proyecto-IS');
 
 
   $DB_CONFIG = [
