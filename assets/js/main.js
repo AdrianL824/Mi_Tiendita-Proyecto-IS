@@ -1,5 +1,5 @@
 let listElements = document.querySelectorAll('.list__button--click');
-let RAIZ_2 = 'http://localhost:7200/refac_tiendita';
+let RAIZ_2 = 'http://localhost/ProyectoIS/Mi_Tiendita-Proyecto-IS';
 
 
 const listElementFunction = (listElement) => {

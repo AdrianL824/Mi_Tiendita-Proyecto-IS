@@ -1,6 +1,6 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
-let RAIZ = 'http://localhost:7200/refac_tiendita';
+let RAIZ = 'http://localhost/ProyectoIS/Mi_Tiendita-Proyecto-IS';
 
 const cleanInput = (formulario) => {
 	const form_children = Array.from(formulario.querySelectorAll("input"));
