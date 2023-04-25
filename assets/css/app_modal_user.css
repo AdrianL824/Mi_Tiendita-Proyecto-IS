@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .modal{
+<<<<<<< HEAD
     position: fixed;
     top: 0;
     left: 0;
@@ -13,6 +14,42 @@
     transition: opacity .6s .9s;
     --transform: translateY(-100vh);
     --transition: transform .8s;
+=======
+    display: flex;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    background-color: #111111bd;
+    z-index: 10;
+    animation: show-modal .5s ease-out forwards;
+}
+
+@keyframes show-modal{
+    from {
+        top: -100vh;
+    }
+    to{
+        top: 0;
+    }
+}
+
+.modal-close{
+    animation: close-modal .8s ease-out forwards;
+}
+
+@keyframes close-modal{
+    from {
+        top: 0;
+    }
+    to{
+        top: -150vh;
+        opacity: 0;
+    }
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 }
 
 .modal--show{
@@ -23,6 +60,7 @@
     --transition: transform .8s .8s;
 }
 
+<<<<<<< HEAD
 .modal2{
     position: fixed;
     top: 0;
@@ -93,6 +131,8 @@
 }
 
 
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 .modal__container{
     margin: auto;
     width: 90%;
@@ -109,6 +149,7 @@
     transition:var(--transition);
 }
 
+<<<<<<< HEAD
 .modal2__container{
     margin: auto;
     width: 90%;
@@ -157,6 +198,8 @@
     transition:var(--transition);
 }
 
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 .modal__title{
     font-size: 1.3rem;
     text-align: center;
@@ -168,6 +211,7 @@
     text-align: center;
 }
 
+<<<<<<< HEAD
 .modal2__paragraph{
     margin-bottom: 10px;
     font-size: 15px;
@@ -182,6 +226,10 @@
 
 .modal4__paragraph{
     margin-bottom: 10px;
+=======
+.modal__paragraph__alert{
+    margin-bottom: 40px;
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
     font-size: 15px;
     text-align: center;
 }
@@ -196,7 +244,10 @@
 }
 
 .modal__close{
+<<<<<<< HEAD
 
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
     text-decoration: none;
     color: #fff;
     background-color: #088d30;
@@ -209,7 +260,10 @@
 }
 
 .modal__close2{
+<<<<<<< HEAD
 
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
     text-decoration: none;
     color: #fff;
     background-color: #ac1515;
@@ -233,16 +287,27 @@
 
 
 .close_modal{
+<<<<<<< HEAD
     position: absolute;
     top: 3%;
     right: 3%;
     font-size: x-large;
     font-weight: bold;
     cursor: pointer;
+=======
+    display: inline-block;
+    position: relative;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+    left: 13.5em;
+    top: -0.4em;
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 }
 
 .close_modal:hover{
     color: #bb1313;
+<<<<<<< HEAD
 }
 
 .close3_modal{
@@ -269,4 +334,6 @@
 
 .close4_modal:hover{
     color: #bb1313;
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 }

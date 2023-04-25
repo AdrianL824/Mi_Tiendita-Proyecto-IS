@@ -1,5 +1,18 @@
 <?php require 'views/includes/header.php' ?>
 
+<<<<<<< HEAD
+=======
+<script defer type="module">
+      
+  import { submenuActive } from "./assets/js/menu.js";
+  import { deleteUserAlert } from './assets/js/registerValidation.js';
+
+  submenuActive();
+  deleteUserAlert();
+</script>
+
+
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 <section class="page-content">
   <h2 class="title-page">Lista de usuarios</h2>
   <div class="users-table">
@@ -33,7 +46,11 @@
 
             <th><a href="<?=RAIZ?>/user-edit.php?id=<?=$row['id']?>" class="users-table--edit">Editar</a></th>
             <th>
+<<<<<<< HEAD
               <form action="<?=RAIZ?>/user-delete.php?id=<?=$row['id']?>" class="from-delete" method="post">
+=======
+              <form action="<?=RAIZ?>/user-delete.php?id=<?=$row['id']?>" class="form-users-delete" method="post">
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
                 <input type="submit" class="users-table--delete" value="Eliminar" />
               </form>
             </th>   
@@ -44,6 +61,7 @@
   </div>
 </section>
 
+<<<<<<< HEAD
 <section class="modal ">
   <div class="modal__container">
     <h2 class="modal__title">Eliminar usuario</h2>
@@ -55,5 +73,7 @@
     </div>
   </div>
 </section>
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 
 <?php require 'views/includes/footer.php' ?>

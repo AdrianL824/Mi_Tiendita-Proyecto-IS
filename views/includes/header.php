@@ -6,17 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+<<<<<<< HEAD
 	<link rel="stylesheet" href="<?=RAIZ?>/assets/css/estilos.css">
   <link rel="stylesheet" href="<?=RAIZ?>/assets/css/app_modal_user.css">
   <link rel="stylesheet" href="<?=RAIZ?>/assets/css/pages.css">
   <link rel="stylesheet" href="<?=RAIZ?>/assets/css/lista_usr.css">
 
   <script defer src="<?=RAIZ?>/assets/js/delete.js"></script>
+=======
+	<link rel="stylesheet" href="./assets/css/estilos.css">
+  <link rel="stylesheet" href="./assets/css/app_modal_user.css">
+  <link rel="stylesheet" href="./assets/css/pages.css">
+  <link rel="stylesheet" href="./assets/css/lista_usr.css">
+
+  <script defer src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 </head>
 <body>
 
     <header class="header">
+<<<<<<< HEAD
         <img class="imglogo" src="<?=RAIZ?>/assets/img/logito.png" alt="">
+=======
+        <img class="imglogo" src="./assets/img/logito.png" alt="">
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
         <!-- Mi Tiendida -->
     </header>
 
@@ -34,7 +47,11 @@
           <li class="list__item list__item--click">
             <div class="list__button list__button--click">
               <a href="#" class="nav__link">Usuario</a> 
+<<<<<<< HEAD
               <img src="<?=RAIZ?>/assets/img/arrow.svg" class="list__arrow">
+=======
+              <img src="./assets/img/arrow.svg" class="list__arrow">
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
             </div>
 
             <ul class="list__show">

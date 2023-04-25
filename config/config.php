@@ -2,7 +2,11 @@
 
   require './config/db.php';
 
+<<<<<<< HEAD
   define('RAIZ', 'http://localhost/ProyectoIS/Mi_Tiendita-Proyecto-IS');
+=======
+  define('RAIZ', 'http://localhost/Mi_Tiendita-Proyecto-IS');
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 
 
   $DB_CONFIG = [

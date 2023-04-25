@@ -1,11 +1,37 @@
 <?php require 'views/includes/header.php' ?>
 
+<<<<<<< HEAD
+<<<<<<<< HEAD:views/user-edit.view.php
 	<section class="page--content">
 		<h1 class= "titulo-seccion" >Editar usuario</h1>
 		<form action="" class="formulario" id="formulario" method="POST">
 		
 			<input type="hidden" name="id" value="<?=$user['id']?>">
 
+========
+<script defer type="module">    
+  import { submenuActive } from "./assets/js/menu.js"
+	import execRegisterValidation, { actionRegister } from "./assets/js/registerValidation.js"
+  submenuActive();
+	execRegisterValidation(actionRegister);
+</script>
+
+	<section class="page--content">
+		<h1 class= "titulo-seccion" >Formulario de registro</h1>
+		<form action="" class="formulario" id="formulario" method="POST">
+			
+>>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1:views/user-register.view.php
+=======
+<script defer type="module">
+	import execRegisterValidation, { actionUpdate } from "./assets/js/registerValidation.js"
+	execRegisterValidation(actionUpdate, true);
+</script>
+
+	<section class="page--content">
+		<h1 class= "titulo-seccion" >Formulario de actualización</h1>
+		<form action="<?=$_SERVER['PHP_SELF'] . "?id=" . $user['id']?>" class="formulario" id="formulario" method="POST">
+		
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 			<!-- Grupo: Nombre -->
 			<div class="formulario__grupo" id="grupo__nombre">
 				<div class="contval">
@@ -16,7 +42,7 @@
 					<input type="text" class="formulario__input" name="nombre" id="nombre" value="<?=$user['nombre']?>" placeholder="Ingrese nombres">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 2 a 30 carácteres alfabéticos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: apellidos -->
@@ -29,7 +55,7 @@
 					<input type="text" class="formulario__input" name="apellidos" id="apellidos" value="<?=$user['apellido']?>" placeholder="Ingrese apellidos">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 2 a 50 carácteres alfabéticos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: Correo Electronico -->
@@ -42,7 +68,7 @@
 					<input type="email" class="formulario__input" name="correo" id="correo" value="<?=$user['email']?>" placeholder="ejemplo@servidor.com">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Correo electrónico inválido</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: direccion -->
@@ -55,7 +81,7 @@
 					<input type="text" class="formulario__input" name="direccion" id="direccion" value="<?=$user['direccion']?>" placeholder="Ingrese dirección">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 5 a 100 carácteres alfanuméricos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: tipoUsuario -->
@@ -65,15 +91,28 @@
 					<p class="signo">*</p>
 				</div>
 				<div class="formulario__grupo-input">
+<<<<<<< HEAD
+<<<<<<<< HEAD:views/user-edit.view.php
 					<!-- <input type="text" class="formulario__input" name="tipoUsuario" id="tipoUsuario" placeholder="Seleccione tipo usuario"> -->
+					<select class="formulario__input tipoUsuario" id="tipoUsuario" name="tipo_usr">
+						<option value="<?=$user['tipo_usr']?>" selected><?=$user['tipo_usr']?></option>
+========
+					<select class="formulario__input tipoUsuario" id="tipoUsuario" name="tipo_usr">
+						<option value="" disabled selected>Seleccione tipo usuario</option>
+>>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1:views/user-register.view.php
+						<option value="Vendedor">Vendedor</option>
+						<option value="Almacenero">Almacenero</option>
+						<option value="Gerente Propietario">Gerente propietario</option>
+=======
 					<select class="formulario__input tipoUsuario" id="tipoUsuario" name="tipo_usr">
 						<option value="<?=$user['tipo_usr']?>" selected><?=$user['tipo_usr']?></option>
 						<option value="Vendedor">Vendedor</option>
 						<option value="Almacenero">Almacenero</option>
-						<option value="Gerente Propietario">Gerente propietario</option>
+						<option value="Gerente propietario">Gerente propietario</option>
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 					</select>
 				</div>
-				<p class="formulario__input-error">El usuario tiene tener un tipo de usuario.</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: Teléfono -->
@@ -86,7 +125,7 @@
 					<input type="text" class="formulario__input" name="telefono" id="telefono" value="<?=$user['telefono']?>" placeholder="Ingrese número">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 7 a 8 carácteres numericos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: Contraseña -->
@@ -99,7 +138,7 @@
 					<input type="password" class="formulario__input" name="password" id="password" value="<?=$user['pass']?>" placeholder="Ingrese contraseña">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 6 a 20 carácteres alfanuméricos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 			
 			<!-- Grupo: Ci -->
@@ -112,7 +151,7 @@
 					<input type="text" class="formulario__input" name="ci" id="ci" value="<?=$user['ci']?>" placeholder="Ingrese ci">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 6 a 8 carácteres numéricos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: Contraseña 2 -->
@@ -125,7 +164,7 @@
 					<input type="password" class="formulario__input" name="password2" id="password2" value="<?=$user['pass']?>" placeholder="Ingrese contraseña">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Las contraseñas no coinciden</p>
+				<p class="formulario__input-error"></p>
 				<div class="campo"><br><br><br>
 					* Campo obligatorio
 				</div>
@@ -134,6 +173,8 @@
 			
 			<!--Botones en el formulario guardar y cancelar-->
 			<div class="hero__texts">
+<<<<<<< HEAD
+<<<<<<<< HEAD:views/user-edit.view.php
 				<a href="#" class="hero__cta">Guardar</a>
 				<a href="#" class="hero__cta2">Cancelar</a>
 			</div>
@@ -174,6 +215,19 @@
                 </div>
             </section>
 
+========
+				<button type="submit" class="hero__cta">Guardar</button>
+				<button type="button" class="hero__cta2" id="btn-cancel-reset">Cancelar</button>
+			</div>
+			
+
+>>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1:views/user-register.view.php
+=======
+				<button type="submit" class="hero__cta">Guardar</button>
+				<button type="button" class="hero__cta2" id="btn-cancel-reset">Cancelar</button>
+			</div>
+
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 		</form>
 	</section>
 
