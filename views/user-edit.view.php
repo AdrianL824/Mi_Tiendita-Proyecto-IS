@@ -1,11 +1,14 @@
 <?php require 'views/includes/header.php' ?>
 
-	<section class="page--content">
-		<h1 class= "titulo-seccion" >Editar usuario</h1>
-		<form action="" class="formulario" id="formulario" method="POST">
-		
-			<input type="hidden" name="id" value="<?=$user['id']?>">
+<script defer type="module">
+	import execRegisterValidation, { actionUpdate } from "./assets/js/registerValidation.js"
+	execRegisterValidation(actionUpdate, true);
+</script>
 
+	<section class="page--content">
+		<h1 class= "titulo-seccion" >Formulario de actualización</h1>
+		<form action="<?=$_SERVER['PHP_SELF'] . "?id=" . $user['id']?>" class="formulario" id="formulario" method="POST">
+		
 			<!-- Grupo: Nombre -->
 			<div class="formulario__grupo" id="grupo__nombre">
 				<div class="contval">
@@ -16,7 +19,7 @@
 					<input type="text" class="formulario__input" name="nombre" id="nombre" value="<?=$user['nombre']?>" placeholder="Ingrese nombres">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 2 a 30 carácteres alfabéticos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: apellidos -->
@@ -29,7 +32,7 @@
 					<input type="text" class="formulario__input" name="apellidos" id="apellidos" value="<?=$user['apellido']?>" placeholder="Ingrese apellidos">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 2 a 50 carácteres alfabéticos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: Correo Electronico -->
@@ -42,7 +45,7 @@
 					<input type="email" class="formulario__input" name="correo" id="correo" value="<?=$user['email']?>" placeholder="ejemplo@servidor.com">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Correo electrónico inválido</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: direccion -->
@@ -55,7 +58,7 @@
 					<input type="text" class="formulario__input" name="direccion" id="direccion" value="<?=$user['direccion']?>" placeholder="Ingrese dirección">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 5 a 100 carácteres alfanuméricos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: tipoUsuario -->
@@ -65,15 +68,14 @@
 					<p class="signo">*</p>
 				</div>
 				<div class="formulario__grupo-input">
-					<!-- <input type="text" class="formulario__input" name="tipoUsuario" id="tipoUsuario" placeholder="Seleccione tipo usuario"> -->
 					<select class="formulario__input tipoUsuario" id="tipoUsuario" name="tipo_usr">
 						<option value="<?=$user['tipo_usr']?>" selected><?=$user['tipo_usr']?></option>
 						<option value="Vendedor">Vendedor</option>
 						<option value="Almacenero">Almacenero</option>
-						<option value="Gerente Propietario">Gerente propietario</option>
+						<option value="Gerente propietario">Gerente propietario</option>
 					</select>
 				</div>
-				<p class="formulario__input-error">El usuario tiene tener un tipo de usuario.</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: Teléfono -->
@@ -86,7 +88,7 @@
 					<input type="text" class="formulario__input" name="telefono" id="telefono" value="<?=$user['telefono']?>" placeholder="Ingrese número">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 7 a 8 carácteres numericos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: Contraseña -->
@@ -99,7 +101,7 @@
 					<input type="password" class="formulario__input" name="password" id="password" value="<?=$user['pass']?>" placeholder="Ingrese contraseña">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 6 a 20 carácteres alfanuméricos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 			
 			<!-- Grupo: Ci -->
@@ -112,7 +114,7 @@
 					<input type="text" class="formulario__input" name="ci" id="ci" value="<?=$user['ci']?>" placeholder="Ingrese ci">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Ingrese 6 a 8 carácteres numéricos</p>
+				<p class="formulario__input-error"></p>
 			</div>
 
 			<!-- Grupo: Contraseña 2 -->
@@ -125,7 +127,7 @@
 					<input type="password" class="formulario__input" name="password2" id="password2" value="<?=$user['pass']?>" placeholder="Ingrese contraseña">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">Las contraseñas no coinciden</p>
+				<p class="formulario__input-error"></p>
 				<div class="campo"><br><br><br>
 					* Campo obligatorio
 				</div>
@@ -134,45 +136,9 @@
 			
 			<!--Botones en el formulario guardar y cancelar-->
 			<div class="hero__texts">
-				<a href="#" class="hero__cta">Guardar</a>
-				<a href="#" class="hero__cta2">Cancelar</a>
+				<button type="submit" class="hero__cta">Guardar</button>
+				<button type="button" class="hero__cta2" id="btn-cancel-reset">Cancelar</button>
 			</div>
-			
-
-
-			<!--Seccion de Modales a mostrar-->
-			<section class="modal ">
-                <div class="modal__container">
-                    <h2 class="modal__title">Actualizar usuario</h2>
-                    <p class="modal__paragraph">¿Está seguro que desea actualizar los datos del usuario?</p>
-                    <div class="a"></div>
-                    <div class="modal_buttons">
-                        <button class="modal__close">Si</button>
-                        <button class="modal__close2">No</button>
-                    </div>
-                </div>
-            </section>
-        
-            <section class="modal2 ">
-                <div class="modal2__container">
-                    <p class="modal2__paragraph">Cancelado</p>
-                    <div class="close_modal">x</div>
-                </div>
-            </section>
-
-            <section class="modal3 ">
-                <div class="modal3__container">
-                    <p class="modal3__paragraph">Usuario actualizado exitosamente</p>
-                    <div class="close3_modal">x</div>
-                </div>
-            </section>
-
-			<section class="modal4 ">
-                <div class="modal4__container">
-                    <p class="modal4__paragraph">Asegúrese de que todos los campos estén llenados correctamente</p>
-                    <div class="close4_modal">x</div>
-                </div>
-            </section>
 
 		</form>
 	</section>

@@ -1,1 +1,0 @@
-const formulario = document.getElementById('users-table--edit');
