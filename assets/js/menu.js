@@ -42,10 +42,3 @@ export const menuResponsive = () => {
   });
 }
 
-export const menuAction = () => {
-  listElements.forEach(listElement => {
-    listElement.addEventListener('click', () => {
-        listElementFunction(listElement);
-    })
-  });
-}
