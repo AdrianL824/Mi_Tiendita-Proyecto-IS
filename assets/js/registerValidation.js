@@ -166,22 +166,22 @@ import InputValidate, {
   }
   
   
-  export const deleteUserAlert = () => {
-	const forms = Array.from(document.getElementsByClassName('form-users-delete'));
-  
-	forms.forEach((item) => {
-	  item.addEventListener('submit', (e) => {
-		e.preventDefault();
-  
-		const confirm = () => { item.submit();}
-		const cancel = () => {
-		  alertModal('Cancelado');
-		}
-  
-		confirmModal('Eliminar usuario', '¿Está seguro que desea eliminar el usuario?', confirm, cancel);
-	  });
-	});
-  }
+export const deleteUserAlert = () => {
+  const forms = Array.from(document.getElementsByClassName('form-users-delete'));
+
+  forms.forEach((item) => {
+    item.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const confirm = () => { item.submit();}
+      const cancel = () => {
+        alertModal('Cancelado');
+      }
+
+      confirmModal('Eliminar usuario', '¿Está seguro que desea eliminar este usuario?', confirm, cancel);
+    });
+  });
+}
   
   
   //Ejecutar validaciones
