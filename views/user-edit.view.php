@@ -135,10 +135,13 @@
 		
 			
 			<!--Botones en el formulario guardar y cancelar-->
+			<!--guardan los datos de la ventana editar-->
 			<div class="hero__texts">
 				<button type="submit" class="hero__cta">Guardar</button>
 				<button type="button" class="hero__cta2" id="btn-cancel-reset">Cancelar</button>
 			</div>
+
+
 
 		</form>
 	</section>
