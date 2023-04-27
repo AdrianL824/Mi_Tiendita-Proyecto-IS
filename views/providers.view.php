@@ -11,7 +11,7 @@
 
 
 <section class="page-content">
-  <h2 class="title-page">Lista de usuarios</h2>
+  <h2 class="title-page">Lista de proveedores</h2>
   <div class="users-table">
     <table>
       <thead> <!-- encabezado -->
