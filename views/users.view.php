@@ -43,7 +43,7 @@
 
             <th><a href="<?=RAIZ?>/user-edit.php?id=<?=$row['id']?>" class="users-table--edit">Editar</a></th>
             <th>
-              <form action="<?=RAIZ?>/user-delete.php?id=<?=$row['id']?>" class="form-users-delete" method="post">
+              <form action="<?=RAIZ?>/delete.php?id=<?=$row['id']?>&type=users" class="form-users-delete" method="post">
                 <input type="submit" class="users-table--delete" value="Eliminar" />
               </form>
             </th>   
