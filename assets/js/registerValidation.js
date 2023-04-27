@@ -131,7 +131,7 @@ import InputValidate, {
   
 	btncancel.addEventListener('click', () => {
 	  alertModal("Cancelado", () => {
-		window.location.href = 'http://localhost/tiendita/users.php';
+		window.location.href = 'http://localhost/Mi_Tiendita-Proyecto-IS/users.php';
 	  });
 	});
   
@@ -153,7 +153,7 @@ import InputValidate, {
   
 	  const canceled = () => {
 		alertModal("Cancelado", () => {
-		  window.location.href = 'http://localhost/tiendita/users.php';
+		  window.location.href = 'http://localhost/Mi_Tiendita-Proyecto-IS/users.php';
 		});
 	  }
 	  
