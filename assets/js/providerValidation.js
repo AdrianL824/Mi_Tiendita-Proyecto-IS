@@ -127,7 +127,7 @@ export const actionUpdate = () => {
 
     const canceled = () => {
       alertModal("Cancelado", () => {
-        window.location.href = 'http://localhost/Mi_Tiendita-Proyecto-IS/provides.php';
+        window.location.href = 'http://localhost/Mi_Tiendita-Proyecto-IS/providers.php';
       });
     }
     
