@@ -32,7 +32,7 @@ import InputValidate, {
 	  InputValidate(input, index, [
 		validarSoloLetras(input),
 		validarMinimo(input, 2),
-		validarMaximo(input, 50)
+		validarMaximo(input, 30)
 	  ], errores)
 	},
   
@@ -45,8 +45,7 @@ import InputValidate, {
 	direccion: () => {
 	  InputValidate(input, index, [
 		validarLetrasNumerosEspeciales(input),
-		validarMinimo(input, 5),
-		validarMaximo(input, 100)
+		validarMinimo(input, 7)
 	  ], errores)
 	},
   
@@ -67,16 +66,15 @@ import InputValidate, {
 	password: () => {
 	  InputValidate(input, index, [
 		validarLetrasNumeros(input),
-		validarMinimo(input, 6),
-		validarMaximo(input, 10)
+		validarMinimo(input, 6)
 	  ], errores)
 	},
   
 	ci: () => {
 	  InputValidate(input, index, [
-		validarSoloNumeros(input),
+		validarLetrasNumeros(input),
 		validarMinimo(input, 6),
-		validarMaximo(input, 8)
+		validarMaximo(input, 10)
 	  ], errores)
 	},
   
@@ -133,8 +131,7 @@ import InputValidate, {
   
 	btncancel.addEventListener('click', () => {
 	  alertModal("Cancelado", () => {
-		// window.location.href = 'http://localhost:7200/refac_tiendita_js/users.php';
-		window.location.href = 'http://localhost/Mi_Tiendita-Proyecto-IS/users.php';
+		window.location.href = 'http://localhost:7200/tiendita/users.php';
 	  });
 	});
   
@@ -156,8 +153,7 @@ import InputValidate, {
   
 	  const canceled = () => {
 		alertModal("Cancelado", () => {
-		  // window.location.href = 'http://localhost:7200/refac_tiendita_js/users.php';
-		  window.location.href = 'http://localhost/Mi_Tiendita-Proyecto-IS/users.php';
+		  window.location.href = 'http://localhost:7200/tiendita/users.php';
 		});
 	  }
 	  
@@ -178,7 +174,7 @@ import InputValidate, {
 		  alertModal('Cancelado');
 		}
   
-		confirmModal('Eliminar usuario', '¿Está seguro que desea eliminar el usuario?', confirm, cancel);
+		confirmModal('Eliminar usuario', '¿Está seguro que desea eliminar este usuario?', confirm, cancel);
 	  });
 	});
   }
@@ -194,3 +190,4 @@ import InputValidate, {
   
 	action();
   }
+  
