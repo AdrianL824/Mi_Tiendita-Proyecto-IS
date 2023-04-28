@@ -35,7 +35,7 @@ export const validateEmpty = (campo) => {
 
 // Validación de solo letras
 export const validarSoloLetras = (campo) => {
-  let regex = /^[A-Za-zÀ-ÿñÑ ]+$/;
+  let regex = /^[a-zA-Z ]+$/;
   if (!regex.test(campo.value)) {
     campo.setCustomValidity("Por favor ingrese solo letras");
     return false;
@@ -46,7 +46,7 @@ export const validarSoloLetras = (campo) => {
 
 // Validación de letras y números
 export const validarLetrasNumeros = (campo) => {
-  let regex = /^[a-zA-ZÀ-ÿñÑ0-9.]+$/;
+  let regex = /^[0-9a-zA-Z]+$/;
   if (!regex.test(campo.value)) {
     campo.setCustomValidity("Por favor ingrese solo letras y números");
     return false;
@@ -56,9 +56,9 @@ export const validarLetrasNumeros = (campo) => {
 }
 
 export const validarLetrasNumerosEspeciales = (campo) => {
-  let regex = /^[a-zA-Z0-9ñÑ #°/.,]*$/;
+  let regex = /^[a-zA-Z0-9 !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
   if (!regex.test(campo.value)) {
-    campo.setCustomValidity("Por favor ingrese solo letras, números y (#,°,/,.)");
+    campo.setCustomValidity("Por favor ingrese solo letras, números y algunos caracteres especiales");
     return false;
   } else {
     return true;
@@ -105,6 +105,19 @@ export const validarMaximo = (campo, maximo) => {
     return true;
   }
 }
+
+
+// Validación de url
+export const validarURL = (campo) => {
+  let regex = /^(http(s)?:\/\/)?[\w.-]+(\.[\w.-]+)+[a-zA-Z0-9\-\._~:/?#[\]@!\$&'\(\)\*\+,;=]+$/;
+  if (!regex.test(campo.value)) {
+    campo.setCustomValidity("Por favor ingrese una URL válida");
+    return false;
+  } else {
+    return true;
+  }
+}
+
 
 // Validación de coincidencia de contraseñas
 export const validarPasswordConfirm = (campo1, campo2) => {
