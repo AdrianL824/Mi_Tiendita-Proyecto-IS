@@ -5,6 +5,4 @@
 
   sessionValidate();
 
-  require './views/inicio.view.php';
-
 ?>
