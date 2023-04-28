@@ -15,4 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     header('location: '. RAIZ . "/login.php?pop=$pop");
   }
 }
+
+require './views/login.view.php';
+
 ?>
