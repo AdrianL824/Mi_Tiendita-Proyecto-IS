@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
   require './config/db.php';
 
@@ -12,6 +12,10 @@
     'user' => 'sql9611059',
     'pass' => 'LkcxBGFRwD'
   ];
+
+  if(isset($_SESSION['user'])){
+    $AUTH = $_SESSION['user'];
+  }
 
   define('CONNECT', conexion($DB_CONFIG));
 
