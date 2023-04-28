@@ -135,3 +135,56 @@
 .close_modal:hover{
     color: #bb1313;
 }
+
+
+
+
+
+
+.menu-bar {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, 0.8);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+  
+.menu-bar-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 1.875em;
+}
+
+.menu-bar a {
+    padding: 0.5em;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.menu-bar .closebtn {
+    position: absolute;
+    top: 1.25em;
+    right: 45px;
+    font-size: 3.75em;
+}
+
+@media screen and (max-height: 450px) {
+    .menu-bar {overflow-y: auto;}
+    .menu-bar a {font-size: 20px}
+    .menu-bar .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
