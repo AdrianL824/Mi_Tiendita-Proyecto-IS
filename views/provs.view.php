@@ -1,15 +1,5 @@
 <?php require 'views/includes/header.php' ?>
 
-<script defer type="module">
-      
-  import { submenuActive } from "./assets/js/menu.js";
-  import { deleteUserAlert } from './assets/js/registerValidation.js';
-
-  submenuActive();
-  deleteUserAlert();
-</script>
-
-
 <section class="page-content">
   <h2 class="title-page">Lista de usuarios</h2>
   <div class="users-table">
@@ -18,7 +8,6 @@
         <tr>
           <th width= "1px">Id</th>
           <th>Nombre/s</th>
-          <th>Apellido/s</th>
           <th>Correo</th>
           <th>Teléfono</th>
           <th>C.I.</th>
@@ -33,7 +22,6 @@
           <tr style="font-size:13px;">
             <th><?= $row['id']?></th>
             <th><?= $row['nombre']?></th>
-            <th><?= $row['apellido']?></th>
             <th><?= $row['email']?></th>
             <th><?= $row['telefono']?></th>
             <th><?= $row['ci']?></th>
@@ -43,7 +31,7 @@
 
             <th><a href="<?=RAIZ?>/user-edit.php?id=<?=$row['id']?>" class="users-table--edit">Editar</a></th>
             <th>
-              <form action="<?=RAIZ?>/user-delete.php?id=<?=$row['id']?>" class="form-users-delete" method="post">
+              <form action="<?=RAIZ?>/user-delete.php?id=<?=$row['id']?>" class="from-delete" method="post">
                 <input type="submit" class="users-table--delete" value="Eliminar" />
               </form>
             </th>   
@@ -54,5 +42,16 @@
   </div>
 </section>
 
+<section class="modal ">
+  <div class="modal__container">
+    <h2 class="modal__title">Eliminar usuario</h2>
+    <p class="modal__paragraph">¿Está seguro que desea eliminar este usuario?</p>
+    <div class="a"></div>
+    <div class="modal_buttons">
+      <button class="modal__close">Si</button>
+      <button class="modal__close2">No</button>
+    </div>
+  </div>
+</section>
 
 <?php require 'views/includes/footer.php' ?>
