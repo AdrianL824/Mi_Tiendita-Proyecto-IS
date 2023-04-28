@@ -131,7 +131,7 @@ export const actionUpdate = () => {
 
   btncancel.addEventListener('click', () => {
     alertModal("Cancelado", () => {
-      window.location.href = 'http://localhost/tiendita/users.php';
+      window.location.href = 'http://localhost:7200/tiendita/users.php';
     });
   });
 
@@ -153,7 +153,7 @@ export const actionUpdate = () => {
 
     const canceled = () => {
       alertModal("Cancelado", () => {
-        window.location.href = 'http://localhost/tiendita/users.php';
+        window.location.href = 'http://localhost:7200/tiendita/users.php';
       });
     }
     
