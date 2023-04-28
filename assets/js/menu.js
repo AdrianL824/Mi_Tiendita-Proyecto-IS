@@ -27,3 +27,17 @@ export const menuAction = () => {
     })
   });
 }
+
+export const menuResponsive = () => {
+  const bar = document.getElementById("menu-bar");
+  const openBar = document.getElementById("menu-bar-open");
+  const closeBar = document.getElementById("menu-bar-close");
+
+  openBar.addEventListener('click', () => {
+    bar.style.height = "100%";
+  });
+
+  closeBar.addEventListener('click', () => {
+    bar.style.height = "0%";
+  });
+}
