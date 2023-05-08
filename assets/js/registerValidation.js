@@ -13,6 +13,7 @@ import InputValidate, {
 } from './regexp.js'
 
 import { confirmModal, alertModal } from './alerts.js'
+import env from './env.js'
 
 
 const errores = Array.from(document.querySelectorAll('.formulario__input-error'));
@@ -131,7 +132,7 @@ export const actionUpdate = () => {
 
   btncancel.addEventListener('click', () => {
     alertModal("Cancelado", () => {
-      window.location.href = 'http://localhost:7200/tiendita/users.php';
+      window.location.href = `${env.host}/users.php`;
     });
   });
 
@@ -153,7 +154,7 @@ export const actionUpdate = () => {
 
     const canceled = () => {
       alertModal("Cancelado", () => {
-        window.location.href = 'http://localhost:7200/tiendita/users.php';
+        window.location.href = `${env.host}/users.php`;
       });
     }
     

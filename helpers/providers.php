@@ -1,10 +1,17 @@
 <?php
 
   function getProviders(){
-    $user = $_SESSION['user']['id'];
-    $sql = CONNECT->prepare('SELECT * FROM providers WHERE user_id = ?');
-    $sql->execute([$user]);
-    return $sql->fetchAll();
+    $user = $_SESSION['user'];
+
+    if($user['tipo_usr'] == "Gerente"){
+      $sql = CONNECT->prepare('SELECT * FROM providers');
+      $sql->execute();
+      return $sql->fetchAll();
+    }else{
+      $sql = CONNECT->prepare('SELECT * FROM providers WHERE user_id = ?');
+      $sql->execute([$user['id']]);
+      return $sql->fetchAll();
+    }
   }
 
   function getProviderByID($id){

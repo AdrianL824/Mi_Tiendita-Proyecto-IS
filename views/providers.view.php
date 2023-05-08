@@ -17,6 +17,11 @@
       <thead> <!-- encabezado -->
         <tr>
           <th width= "1px">Id</th>
+          
+          <?php if($AUTH['tipo_usr'] == "Gerente"): ?>
+            <th>Almacenero</th>
+          <?php endif; ?>
+
           <th>Nombre/s</th>
           <th>Dirección</th>
           <th>Correo</th>
@@ -31,6 +36,11 @@
         <?php foreach($providers as $row): ?>
           <tr style="font-size:13px;">
             <th><?= $row['id']?></th>
+
+            <?php if($AUTH['tipo_usr'] == "Gerente"): ?>
+              <th><?=getUserByID((int) $row['user_id'])['nombre']?></th>
+            <?php endif; ?>
+
             <th><?= $row['names']?></th>
             <th><?= $row['direction']?></th>
             <th><?= $row['email']?></th>
