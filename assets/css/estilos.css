@@ -12,10 +12,15 @@ body {
 
 .header{
     width: 100%;
+<<<<<<< HEAD
 		display: flex;
 		justify-content: space-between;
     background-color: #9594bb;
     /* font-size:xx-large; */
+=======
+    background-color: #9594bb;
+    font-size:xx-large;
+>>>>>>> feature/Reg_prov-btn_cancel
     padding-left: 1%;
 		padding-right: 1%;
 }
@@ -80,9 +85,16 @@ body {
 	margin-right: auto;
 }
 
+.container{
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .nav{
 	width: 16em;
 	min-width: 16em;
+<<<<<<< HEAD
 	height: 85vh;
 }
 
@@ -93,6 +105,9 @@ body {
 
 .nav-bar .list {
 	background-color: transparent;
+=======
+	height: 84vh;
+>>>>>>> feature/Reg_prov-btn_cancel
 }
 
 .nav__link{
@@ -405,6 +420,7 @@ body {
     color: #061736;
 }
 
+<<<<<<< HEAD
 .formulario-buttons{
 	display: flex;
 	justify-content: flex-end;
@@ -412,6 +428,8 @@ body {
 	flex-wrap: wrap;
 }
 
+=======
+>>>>>>> feature/Reg_prov-btn_cancel
 button{
 	cursor: pointer;
 }

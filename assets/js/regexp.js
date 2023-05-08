@@ -35,7 +35,11 @@ export const validateEmpty = (campo) => {
 
 // Validación de solo letras
 export const validarSoloLetras = (campo) => {
+<<<<<<< HEAD
   let regex = /^[a-zA-Z ]+$/;
+=======
+  let regex = /^[A-Za-zÀ-ÿñÑ ]+$/;
+>>>>>>> feature/Reg_prov-btn_cancel
   if (!regex.test(campo.value)) {
     campo.setCustomValidity("Por favor ingrese solo letras");
     return false;
@@ -46,7 +50,11 @@ export const validarSoloLetras = (campo) => {
 
 // Validación de letras y números
 export const validarLetrasNumeros = (campo) => {
+<<<<<<< HEAD
   let regex = /^[0-9a-zA-Z]+$/;
+=======
+  let regex = /^[a-zA-ZÀ-ÿñÑ0-9.]+$/;
+>>>>>>> feature/Reg_prov-btn_cancel
   if (!regex.test(campo.value)) {
     campo.setCustomValidity("Por favor ingrese solo letras y números");
     return false;
@@ -56,9 +64,15 @@ export const validarLetrasNumeros = (campo) => {
 }
 
 export const validarLetrasNumerosEspeciales = (campo) => {
+<<<<<<< HEAD
   let regex = /^[a-zA-Z0-9 !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
   if (!regex.test(campo.value)) {
     campo.setCustomValidity("Por favor ingrese solo letras, números y algunos caracteres especiales");
+=======
+  let regex = /^[a-zA-Z0-9ñÑ #°/.,]*$/;
+  if (!regex.test(campo.value)) {
+    campo.setCustomValidity("Por favor ingrese solo letras, números y (#,°,/,.)");
+>>>>>>> feature/Reg_prov-btn_cancel
     return false;
   } else {
     return true;
@@ -106,6 +120,7 @@ export const validarMaximo = (campo, maximo) => {
   }
 }
 
+<<<<<<< HEAD
 
 // Validación de url
 export const validarURL = (campo) => {
@@ -119,6 +134,8 @@ export const validarURL = (campo) => {
 }
 
 
+=======
+>>>>>>> feature/Reg_prov-btn_cancel
 // Validación de coincidencia de contraseñas
 export const validarPasswordConfirm = (campo1, campo2) => {
   if (campo1.value !== campo2.value) {

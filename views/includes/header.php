@@ -6,17 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	<link rel="stylesheet" href="<?=RAIZ?>/assets/css/estilos.css">
+  <link rel="stylesheet" href="<?=RAIZ?>/assets/css/app_modal_user.css">
+  <link rel="stylesheet" href="<?=RAIZ?>/assets/css/pages.css">
+  <link rel="stylesheet" href="<?=RAIZ?>/assets/css/lista_usr.css">
+
+  <script defer src="<?=RAIZ?>/assets/js/delete.js"></script>
+=======
+>>>>>>> feature/Reg_prov-btn_cancel
 	<link rel="stylesheet" href="./assets/css/estilos.css">
   <link rel="stylesheet" href="./assets/css/app_modal_user.css">
   <link rel="stylesheet" href="./assets/css/pages.css">
   <link rel="stylesheet" href="./assets/css/lista_usr.css">
+<<<<<<< HEAD
   <link rel="stylesheet" href="./assets/css/responsive.css">
 
   <script defer src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+=======
+
+  <script defer src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
 </head>
 <body>
 
     <header class="header">
+<<<<<<< HEAD
         <img class="imglogo" src="./assets/img/logito.png" alt="">
         
         <div class="header-menu--bar">
@@ -33,25 +51,48 @@
             <a href="<?=RAIZ?>/delete.php?type=session">Cerrar Sesion</a>
           </div>
         </div>
+=======
+<<<<<<< HEAD
+        <img class="imglogo" src="<?=RAIZ?>/assets/img/logito.png" alt="">
+=======
+        <img class="imglogo" src="./assets/img/logito.png" alt="">
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+        <!-- Mi Tiendida -->
+>>>>>>> feature/Reg_prov-btn_cancel
     </header>
 
 
     <div class="container">
 
       <nav class="nav">
+<<<<<<< HEAD
         
+=======
+>>>>>>> feature/Reg_prov-btn_cancel
         <ul class="list">
           <li class="list__item">
             <div class="list__button <?=active('index.php')?>">
               <a href="index.php" class="nav__link">Inicio</a>
             </div>
           </li>
+<<<<<<< HEAD
           
         <?php if($AUTH['tipo_usr'] == "Gerente"): ?>
           <li class="list__item list__item--click">
             <div class="list__button list__button--click">
               <a href="#" class="nav__link">Usuario</a> 
               <img src="./assets/img/arrow.svg" class="list__arrow">
+=======
+
+          <li class="list__item list__item--click">
+            <div class="list__button list__button--click">
+              <a href="#" class="nav__link">Usuario</a> 
+<<<<<<< HEAD
+              <img src="<?=RAIZ?>/assets/img/arrow.svg" class="list__arrow">
+=======
+              <img src="./assets/img/arrow.svg" class="list__arrow">
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
             </div>
 
             <ul class="list__show">
@@ -63,6 +104,7 @@
               </li>
             </ul>
           </li>
+<<<<<<< HEAD
         <?php endif; ?>
 
           <li class="list__item list__item--click">
@@ -80,6 +122,8 @@
               </li>
             </ul>
           </li>
+=======
+>>>>>>> feature/Reg_prov-btn_cancel
         </ul>  
       </nav>
 
