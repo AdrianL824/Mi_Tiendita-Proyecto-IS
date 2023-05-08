@@ -54,7 +54,24 @@
         echo "El campo de categoría está vacío"; //mensaje de error si el campo está vacío
     } else {
         $categoria = ""; //vacía el campo de categoría
+    }if(empty($num_celular)) { //verifica si el campo de número de celular está vacío
+        echo "El campo de número de celular está vacío"; //mensaje de error si el campo está vacío
+    } else {
+        $num_celular = ""; //vacía el campo de número de celular
     }
+
+    if(empty($correo)) { //verifica si el campo de correo electrónico está vacío
+        echo "El campo de correo electrónico está vacío"; //mensaje de error si el campo está vacío
+    } else {
+        $correo = ""; //vacía el campo de correo electrónico
+    }
+
+    if(empty($contrasena)) { //verifica si el campo de contraseña está vacío
+        echo "El campo de contraseña está vacío"; //mensaje de error si el campo está vacío
+    } else {
+        $contrasena = ""; //vacía el campo de contraseña
+    }
+}
       >
   
   require './views/provider-register.view.php';
