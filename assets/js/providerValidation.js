@@ -5,9 +5,8 @@ import InputValidate, {
   validarMaximo,
   validarCorreo,
   validateEmpty,
-  validarLetrasNumeros,
   validarSoloNumeros,
-  validarPasswordConfirm,
+  validarURL,
   errorVerification,
   onEvent
 } from './regexp.js'
@@ -20,7 +19,7 @@ const errores = Array.from(document.querySelectorAll('.formulario__input-error')
 // Validaciones de los inputs
 export const validations = (input, index) => ({
 
-  nombre: () => {
+  names: () => {
     InputValidate(input, index, [
       validarSoloLetras(input),
       validarMinimo(input, 2),
@@ -28,34 +27,32 @@ export const validations = (input, index) => ({
     ], errores)
   },
 
-  apellidos: () => {
-    InputValidate(input, index, [
-      validarSoloLetras(input),
-      validarMinimo(input, 2),
-      validarMaximo(input, 30)
-    ], errores)
-  },
-
-  correo: () => {
-    InputValidate(input, index, [
-      validarCorreo(input)
-    ], errores)
-  },
-
-  direccion: () => {
+  direction: () => {
     InputValidate(input, index, [
       validarLetrasNumerosEspeciales(input),
       validarMinimo(input, 7)
     ], errores)
   },
 
-  tipo_usr: () => {
+  email: () => {
+    InputValidate(input, index, [
+      validarCorreo(input)
+    ], errores)
+  },
+
+  web: () => {
+    InputValidate(input, index, [
+      validarURL(input)
+    ], errores)
+  },
+
+  product_type: () => {
     InputValidate(input, index, [
       validateEmpty(input)
     ], errores)
   },
 
-  telefono: () => {
+  phone: () => {
     InputValidate(input, index, [
       validarSoloNumeros(input),
       validarMinimo(input, 7),
@@ -63,29 +60,6 @@ export const validations = (input, index) => ({
     ], errores)
   },
 
-  password: () => {
-    InputValidate(input, index, [
-      validarLetrasNumeros(input),
-      validarMinimo(input, 6)
-    ], errores)
-  },
-
-  ci: () => {
-    InputValidate(input, index, [
-      validarLetrasNumeros(input),
-      validarMinimo(input, 6),
-      validarMaximo(input, 10)
-    ], errores)
-  },
-
-  password2: () => {
-    InputValidate(input, index, [
-      validarPasswordConfirm(document.getElementsByName("password")[0], input),
-      validarLetrasNumeros(input),
-      validarMinimo(input, 6),
-      validarMaximo(input, 10)
-    ], errores)
-  }
 });
 
 
@@ -119,7 +93,7 @@ export const actionRegister = () => {
       }
     }
     
-    confirmModal('Registrar usuario', '¿Está seguro que desea guardar el usuario?', confirm);
+    confirmModal('Registrar proveedor', '¿Está seguro que desea guardar el proveedor?', confirm);
   });
 }
 
@@ -131,7 +105,7 @@ export const actionUpdate = () => {
 
   btncancel.addEventListener('click', () => {
     alertModal("Cancelado", () => {
-      window.location.href = 'http://localhost:7200/tiendita/users.php';
+      window.location.href = 'http://localhost/tiendita/providers.php';
     });
   });
 
@@ -153,7 +127,7 @@ export const actionUpdate = () => {
 
     const canceled = () => {
       alertModal("Cancelado", () => {
-        window.location.href = 'http://localhost:7200/tiendita/users.php';
+        window.location.href = 'http://localhost/tiendita/providers.php';
       });
     }
     
@@ -162,7 +136,7 @@ export const actionUpdate = () => {
 }
 
 
-export const deleteUserAlert = () => {
+export const deleteProviderAlert = () => {
   const forms = Array.from(document.getElementsByClassName('form-users-delete'));
 
   forms.forEach((item) => {
@@ -174,7 +148,7 @@ export const deleteUserAlert = () => {
         alertModal('Cancelado');
       }
 
-      confirmModal('Eliminar usuario', '¿Está seguro que desea eliminar este usuario?', confirm, cancel);
+      confirmModal('Eliminar proveedor', '¿Está seguro que desea eliminar este proveedor?', confirm, cancel);
     });
   });
 }

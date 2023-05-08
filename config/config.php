@@ -1,8 +1,8 @@
-<?php
+<?php session_start();
 
   require './config/db.php';
 
-  define('RAIZ', 'http://localhost/Mi_Tiendita-Proyecto-IS');
+  define('RAIZ', 'http://localhost/Mi_tiendita');
 
 
   $DB_CONFIG = [
@@ -12,6 +12,10 @@
     'user' => 'sql9611059',
     'pass' => 'LkcxBGFRwD'
   ];
+
+  if(isset($_SESSION['user'])){
+    $AUTH = $_SESSION['user'];
+  }
 
   define('CONNECT', conexion($DB_CONFIG));
 
