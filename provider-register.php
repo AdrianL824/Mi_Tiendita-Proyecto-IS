@@ -44,6 +44,17 @@
       } else {
           $apellido = ""; //vacía el campo de apellido
       }
+      if(empty($ciudad)) { //verifica si el campo de ciudad está vacío
+        echo "El campo de ciudad está vacío"; //mensaje de error si el campo está vacío
+    } else {
+        $ciudad = ""; //vacía el campo de ciudad
+    }
+
+    if(empty($categoria)) { //verifica si el campo de categoría está vacío
+        echo "El campo de categoría está vacío"; //mensaje de error si el campo está vacío
+    } else {
+        $categoria = ""; //vacía el campo de categoría
+    }
       >
   
   require './views/provider-register.view.php';
