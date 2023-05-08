@@ -76,7 +76,7 @@
 							<option value="" disabled selected>Seleccione tipo usuario</option>
 							<option value="Vendedor">Vendedor</option>
 							<option value="Almacenero">Almacenero</option>
-							<option value="Gerente">Gerente propietario</option>
+							<option value="Gerente">Gerente</option>
 						</select>
 					</div>
 					<p class="formulario__input-error"></p>

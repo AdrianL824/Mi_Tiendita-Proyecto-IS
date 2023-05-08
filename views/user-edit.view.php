@@ -73,7 +73,7 @@
 							<option value="<?=$user['tipo_usr']?>" selected><?=$user['tipo_usr']?></option>
 							<option value="Vendedor">Vendedor</option>
 							<option value="Almacenero">Almacenero</option>
-							<option value="Gerente">Gerente propietario</option>
+							<option value="Gerente">Gerente</option>
 						</select>
 					</div>
 					<p class="formulario__input-error"></p>

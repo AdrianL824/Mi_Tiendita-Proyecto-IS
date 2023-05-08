@@ -59,7 +59,7 @@
 						<p class="signo">*</p>
 					</div>
 					<div class="formulario__grupo-input">
-						<input type="text" class="formulario__input" name="web" id="web" placeholder="Ingrese sitio web">
+						<input type="text" class="formulario__input" name="web" id="web" placeholder="http://example.com">
 						<i class="formulario__validacion-estado fas fa-times-circle"></i>
 					</div>
 					<p class="formulario__input-error"></p>
