@@ -3,18 +3,14 @@
   require './helpers/providers.php';
   require './helpers/auth.php';
 
-  sessionValidate();
+  if(isset($_POST['submit'])){
+    $id = (int) $_GET['id'];
+    updateProvider($_POST, $id);
+    header('Location: ' . RAIZ . '/providers.php?pop=' . urlencode('Proveedor guardado exitosamente'));
+    exit();
+}
 
-  if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    updateProvider($_POST, (int) $_GET['id']);
+$id = (int) $_GET['id'];
+$provider = getProviderByID($id);
 
-    $pop = 'Proveedor guardado exitosamente';
-    header('location: '. RAIZ . "/providers.php?pop=$pop");
-  }
-
-  $id = (int) $_GET['id'];
-  $provider = getProviderByID($id);
-
-  require './views/provider-edit.view.php';
-
-?>
+require './views/provider-edit.view.php';

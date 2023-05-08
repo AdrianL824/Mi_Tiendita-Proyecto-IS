@@ -9,7 +9,18 @@ body {
 }
 
 
-
+.boton {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+  }
+  
+  .boton:hover {
+	background-color: #3e8e41;
+  }
 .header{
     width: 100%;
 		display: flex;
