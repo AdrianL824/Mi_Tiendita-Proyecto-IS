@@ -73,4 +73,8 @@ export const getParams = (name) => {
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
     return params.get(`${name}`);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> feature/Reg_prov-btn_cancel

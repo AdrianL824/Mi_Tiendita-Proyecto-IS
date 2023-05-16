@@ -26,6 +26,7 @@ export const menuAction = () => {
         listElementFunction(listElement);
     })
   });
+<<<<<<< HEAD
 }
 
 export const menuResponsive = () => {
@@ -40,4 +41,6 @@ export const menuResponsive = () => {
   closeBar.addEventListener('click', () => {
     bar.style.height = "0%";
   });
+=======
+>>>>>>> feature/Reg_prov-btn_cancel
 }

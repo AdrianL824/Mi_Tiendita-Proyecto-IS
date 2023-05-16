@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     </main>
   </div>
 
@@ -55,6 +56,25 @@
     import { menuAction, menuResponsive } from "./assets/js/menu.js";
     menuAction();
     menuResponsive();
+=======
+<<<<<<< HEAD
+    </main>
+  </div>
+
+  
+  <script src="<?=RAIZ?>/assets/js/main.js"></script>
+  <script src="<?=RAIZ?>/assets/js/formulario.js"></script>
+  <script src="<?=RAIZ?>/assets/js/botonEditar.js"></script>
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+=======
+   </main>
+  </div>
+
+
+  <script type="module">
+    import { menuAction } from "./assets/js/menu.js";
+    menuAction();
+>>>>>>> feature/Reg_prov-btn_cancel
   </script>
 
   <?php if(isset($_GET['pop'])): ?>
@@ -65,5 +85,9 @@
     </script>
   <?php endif; ?>
 
+<<<<<<< HEAD
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
 </body>
 </html>

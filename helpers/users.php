@@ -20,7 +20,15 @@
   }
 
 
+<<<<<<< HEAD
   function updateUser($inputs, $id){
+=======
+<<<<<<< HEAD
+  function updateUser($inputs){
+=======
+  function updateUser($inputs, $id){
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
     extract($inputs);
     $sql = "UPDATE users SET nombre = ?, apellido = ?, email = ?, telefono = ?, ci = ?, direccion = ?, tipo_usr = ?, pass = ? WHERE id = ?";
     $res = CONNECT->prepare($sql);
