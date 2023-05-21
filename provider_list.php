@@ -12,3 +12,11 @@
   require './views/providers.view.php';
 
 ?>
+<html>
+<body>
+  <h1>
+    lista de productos
+  </h1>
+</body>
+
+</html>
