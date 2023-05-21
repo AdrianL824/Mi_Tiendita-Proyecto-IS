@@ -11,6 +11,8 @@
 <?php 
   require './config/config.php';
   require './helpers/users.php';
+  require './config/config.php';
+  require './helpers/users.php';
 
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <<<<<<< HEAD
@@ -29,7 +31,8 @@
 
   $id = (int) $_GET['id'];
   $user = getUserByID($id);
-
+$id = (int) $_GET['id'];
+  $user = getUserByID($id);
   require './views/user-edit.view.php';
 
 ?>
