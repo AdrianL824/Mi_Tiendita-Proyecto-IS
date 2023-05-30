@@ -25,7 +25,8 @@
 =======
 >>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
 >>>>>>> feature/Reg_prov-btn_cancel
-  }
+  }$pop = 'Usuario guardado exitosamente';
+  header('location: '. RAIZ . "/users.php?pop=$pop");
 
   $id = (int) $_GET['id'];
   $user = getUserByID($id);

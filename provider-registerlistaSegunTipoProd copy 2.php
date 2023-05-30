@@ -11,6 +11,8 @@
 
     $pop = 'Proveedor guardado exitosamente';
     header('location: '. RAIZ . "/provider-register.php?pop=$pop");
+    $pop = 'Proveedor guardado exitosamente';
+    header('location: '. RAIZ . "/provider-register.php?pop=$pop");
   }
   
   require './views/provider-register.view.php';
