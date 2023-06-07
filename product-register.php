@@ -6,5 +6,12 @@
   require './helpers/files.php';
   require './helpers/auth.php';
 
+  sessionValidate();
+
   
+
+  $providers = getProvidersNoRepeat();
+  
+  require './views/product-register.view.php';
+
 ?>
