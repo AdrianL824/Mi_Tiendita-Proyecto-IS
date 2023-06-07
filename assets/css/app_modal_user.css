@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.modal{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+=======
+>>>>>>> feature/Reg_prov-btn_cancel
+    display: flex;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    background-color: #111111bd;
+    z-index: 10;
+    animation: show-modal .5s ease-out forwards;
+}
+
+@keyframes show-modal{
+    from {
+        top: -100vh;
+    }
+    to{
+        top: 0;
+    }
+}
+
+.modal-close{
+    animation: close-modal .8s ease-out forwards;
+}
+
+@keyframes close-modal{
+    from {
+        top: 0;
+    }
+    to{
+        top: -150vh;
+        opacity: 0;
+    }
+<<<<<<< HEAD
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.modal2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal2--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+.modal3{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal3--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+.modal4{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal4--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
+.modal__container{
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1em 3em;
+    display: inline-block;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+}
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.modal2__container{
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: inline-block;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+}
+
+.modal3__container{
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: inline-block;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+}
+
+.modal4__container{
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: inline-block;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+}
+
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
+.modal__title{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.modal__paragraph{
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+<<<<<<< HEAD
+.modal__paragraph__alert{
+    margin-bottom: 40px;
+=======
+<<<<<<< HEAD
+.modal2__paragraph{
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.modal3__paragraph{
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.modal4__paragraph{
+    margin-bottom: 10px;
+=======
+.modal__paragraph__alert{
+    margin-bottom: 40px;
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
+    font-size: 15px;
+    text-align: center;
+}
+
+.modal_buttons{
+    width: 100%;    
+    background: rgb(255, 255, 255);
+    border-top:rgb(255, 255, 255) 1px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal__close{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
+    text-decoration: none;
+    color: #fff;
+    background-color: #088d30;
+    padding: 1em 4em;
+    border: 1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.modal__close2{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
+    text-decoration: none;
+    color: #fff;
+    background-color: #ac1515;
+    padding: 1em 4em;
+    border: 1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.modal__close:hover{
+    color: #140b64;
+    background-color: #fff;
+}
+
+.modal__close2:hover{
+    color: #140b64;
+    background-color: #fff;
+}
+
+
+.close_modal{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+=======
+>>>>>>> feature/Reg_prov-btn_cancel
+    display: inline-block;
+    position: relative;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+    left: 13.5em;
+    top: -0.4em;
+<<<<<<< HEAD
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
+}
+
+.close_modal:hover{
+    color: #bb1313;
+<<<<<<< HEAD
+}
+
+
+
+
+
+
+.menu-bar {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, 0.8);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+  
+.menu-bar-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 1.875em;
+}
+
+.menu-bar a {
+    padding: 0.5em;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.menu-bar .closebtn {
+    position: absolute;
+    top: 1.25em;
+    right: 45px;
+    font-size: 3.75em;
+}
+
+@media screen and (max-height: 450px) {
+    .menu-bar {overflow-y: auto;}
+    .menu-bar a {font-size: 20px}
+    .menu-bar .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+=======
+<<<<<<< HEAD
+}
+
+.close3_modal{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close3_modal:hover{
+    color: #bb1313;
+}
+
+.close4_modal{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close4_modal:hover{
+    color: #bb1313;
+=======
+>>>>>>> eee9a943c4eb9e70286402ebe61b3721410b4ee1
+>>>>>>> feature/Reg_prov-btn_cancel
+}
